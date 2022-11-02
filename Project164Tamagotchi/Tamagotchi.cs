@@ -55,7 +55,7 @@ namespace Project164Tamagotchi
 
         public int Happiness()
         {
-            int happiness = mCredit + mHealth + mSleep;
+            int happiness = Credit + Health + Sleep;
             happiness = happiness / 3;
 
             return happiness;
