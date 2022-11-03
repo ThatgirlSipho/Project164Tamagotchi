@@ -23,8 +23,10 @@ namespace Project164Tamagotchi
 
 
         public Tamagotchi pet = new Tamagotchi(); // Tamagotchi object that can be accessed in all forms
-        int sleep = 0;
+        int sleep;
         string name;
+        int health = 0;
+        int credit = 100 ;
 
 
 
@@ -50,13 +52,10 @@ namespace Project164Tamagotchi
 
            
             pet = ReadDataFromFile(name) as Tamagotchi;
+            
            
 
         }
-
-
-
-
 
 
         private void btnSleep_Click(object sender, EventArgs e)
@@ -87,7 +86,7 @@ namespace Project164Tamagotchi
 
         private void timerAwake_Tick(object sender, EventArgs e)
         {
-            // each tick is 12 seconds and maximum awake time is 2 minutes 
+            // each tick is 12 seconds and maximum awake time is 4 minutes 
             if (timerSleep.Enabled)
             {
                 timerAwake.Stop(); //making sure that these two do not run at the same time
@@ -96,7 +95,7 @@ namespace Project164Tamagotchi
             {
                 timerAwake.Start();
             }
-            sleep -= 10;
+            sleep -= 5;
             if (sleep == 0)
             {
                 timerAwake.Stop();
@@ -138,7 +137,21 @@ namespace Project164Tamagotchi
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            WriteDataToFile(name, pet);
+
+            try
+            {
+
+                pet.Health = health;
+                pet.Credit = credit;
+                pet.Character = lblName.Text;
+                pet.Sleep = sleep;
+                WriteDataToFile(name, pet);
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show(" Your data has been saved");
+            }
         }
     }
 }

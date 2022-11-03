@@ -63,10 +63,12 @@
             // 
             // timerSleep
             // 
+            this.timerSleep.Interval = 2000;
             this.timerSleep.Tick += new System.EventHandler(this.timerSleep_Tick);
             // 
             // timerAwake
             // 
+            this.timerAwake.Interval = 12000;
             this.timerAwake.Tick += new System.EventHandler(this.timerAwake_Tick);
             // 
             // label1
