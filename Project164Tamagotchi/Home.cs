@@ -24,6 +24,7 @@ namespace Project164Tamagotchi
 
         public Tamagotchi pet = new Tamagotchi(); // Tamagotchi object that can be accessed in all forms
         int sleep = 0;
+        string name;
 
 
 
@@ -36,14 +37,20 @@ namespace Project164Tamagotchi
             lblSleep.Text = Convert.ToString(sleep); //display the sleep levels
                                                      //MessageBox.Show(pet.Character);
             lblName.Text = pet.Character;
-            if (pet.Character == "Fiona")
+            name = pet.Character;
+
+            if(name == "Fiona")
             {
-                pet = ReadDataFromFile("Fiona") as Tamagotchi;
+                pictureBox1.Image = Properties.Resources.Fiona_Happy;
             }
             else
             {
-                pet = ReadDataFromFile("Shrek") as Tamagotchi;
+                pictureBox1.Image= Properties.Resources.Shrek_Happy;
             }
+
+           
+            pet = ReadDataFromFile(name) as Tamagotchi;
+           
 
         }
 
@@ -129,8 +136,9 @@ namespace Project164Tamagotchi
             return obj;
         }
 
-
-
-
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            WriteDataToFile(name, pet);
+        }
     }
 }
