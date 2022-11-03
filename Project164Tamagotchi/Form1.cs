@@ -21,5 +21,21 @@ namespace Project164Tamagotchi
         {
 
         }
+
+        private void btnPlay_Click(object sender, EventArgs e)
+        {
+            Home myform = new Home();
+
+            if (cbxNames.SelectedIndex == 0)
+            {
+                myform.pet.Character = "Fiona";
+            }
+            else
+            {
+                myform.pet.Character = "Shrek";
+            }
+            myform.ShowDialog();
+            this.Close();
+        }
     }
 }

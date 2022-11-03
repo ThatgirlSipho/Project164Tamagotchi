@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.btnPlay = new System.Windows.Forms.Button();
+            this.cbxNames = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // btnPlay
@@ -39,12 +40,25 @@
             this.btnPlay.TabIndex = 0;
             this.btnPlay.Text = "Play";
             this.btnPlay.UseVisualStyleBackColor = true;
+            this.btnPlay.Click += new System.EventHandler(this.btnPlay_Click);
+            // 
+            // cbxNames
+            // 
+            this.cbxNames.FormattingEnabled = true;
+            this.cbxNames.Items.AddRange(new object[] {
+            "Fiona",
+            "Shrek"});
+            this.cbxNames.Location = new System.Drawing.Point(274, 100);
+            this.cbxNames.Name = "cbxNames";
+            this.cbxNames.Size = new System.Drawing.Size(121, 21);
+            this.cbxNames.TabIndex = 1;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.cbxNames);
             this.Controls.Add(this.btnPlay);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -56,6 +70,7 @@
         #endregion
 
         private System.Windows.Forms.Button btnPlay;
+        private System.Windows.Forms.ComboBox cbxNames;
     }
 }
 
