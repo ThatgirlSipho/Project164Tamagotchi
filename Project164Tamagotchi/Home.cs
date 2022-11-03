@@ -9,6 +9,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.Serialization;
 
 namespace Project164Tamagotchi
 {
@@ -29,6 +30,20 @@ namespace Project164Tamagotchi
 
         private void Home_Load(object sender, EventArgs e)
         {
+
+            timerAwake.Start(); //sleep levels deplete from program open
+            sleep = 100; //Sleep levels start high
+            lblSleep.Text = Convert.ToString(sleep); //display the sleep levels
+                                                     //MessageBox.Show(pet.Character);
+            lblName.Text = pet.Character;
+            if (pet.Character == "Fiona")
+            {
+                pet = ReadDataFromFile("Fiona") as Tamagotchi;
+            }
+            else
+            {
+                pet = ReadDataFromFile("Shrek") as Tamagotchi;
+            }
 
         }
 

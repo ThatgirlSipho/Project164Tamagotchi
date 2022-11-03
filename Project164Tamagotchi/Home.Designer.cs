@@ -34,6 +34,7 @@
             this.timerAwake = new System.Windows.Forms.Timer(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.lblSleep = new System.Windows.Forms.Label();
+            this.lblName = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnSleep
@@ -72,11 +73,21 @@
             this.lblSleep.TabIndex = 2;
             this.lblSleep.Text = ".";
             // 
+            // lblName
+            // 
+            this.lblName.AutoSize = true;
+            this.lblName.Location = new System.Drawing.Point(273, 36);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(35, 13);
+            this.lblName.TabIndex = 3;
+            this.lblName.Text = "Name";
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblName);
             this.Controls.Add(this.lblSleep);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnSleep);
@@ -95,5 +106,6 @@
         private System.Windows.Forms.Timer timerAwake;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblSleep;
+        private System.Windows.Forms.Label lblName;
     }
 }
