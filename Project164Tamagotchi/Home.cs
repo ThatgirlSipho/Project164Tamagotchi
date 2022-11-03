@@ -22,5 +22,10 @@ namespace Project164Tamagotchi
         {
 
         }
+
+        private void btnSleep_Click(object sender, EventArgs e)
+        {
+            timerSleep.Start();
+        }
     }
 }

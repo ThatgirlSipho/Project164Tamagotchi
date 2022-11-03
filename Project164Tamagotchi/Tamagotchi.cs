@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Project164Tamagotchi
 {
-    internal class Tamagotchi
+    public class Tamagotchi
     {
         // Data Members
         private int mSleep;
