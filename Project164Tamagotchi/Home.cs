@@ -153,5 +153,10 @@ namespace Project164Tamagotchi
                 MessageBox.Show(" Your data has been saved");
             }
         }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
