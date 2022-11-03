@@ -16,5 +16,11 @@ namespace Project164Tamagotchi
         {
             InitializeComponent();
         }
+        public Tamagotchi pet = new Tamagotchi(); // Tamagotchi object that can be accessed in all forms
+
+        private void Home_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
