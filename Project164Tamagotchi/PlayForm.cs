@@ -19,6 +19,7 @@ namespace Project164Tamagotchi
         int total;
         int score;
         int timeLeft;
+        int credits;
         public PlayForm()
         {
             InitializeComponent();
@@ -59,8 +60,8 @@ namespace Project164Tamagotchi
                 //Player gets the answer right
                 lblAnswer.Text = "Correct";
                 lblAnswer.ForeColor = Color.Blue;
-                score += 1;
-                lblScore.Text = "Score: " + Convert.ToString(score);
+                score += 10;
+                lblScore.Text = "Score: " + score;
                 SetUpGame();
                 petPlay = new Tamagotchi();
                 petPlay.Credit = score;
@@ -72,9 +73,9 @@ namespace Project164Tamagotchi
                 lblAnswer.ForeColor = Color.Red;
             }
             if (score > 0)
-            { 
+            {
                 credits = 10;
-                lblCredit.Text = "Credits: " + Convert.ToString(credits);
+                lblCredit.Text = "Credits: " + credits;
             }
         }
     private void SetUpGame()
