@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
+using System.Reflection.Emit;
 
 namespace Project164Tamagotchi
 {
@@ -19,6 +20,11 @@ namespace Project164Tamagotchi
         {
             InitializeComponent();
         }
+        //global variables
+        public Food foodToUpdate;
+        BindingList<Food> foodItems = new BindingList<Food>();
+
+        //code to pass values from this form to the home form
         public static string SetValueForText1 = "";
         public static string SetValueForText2 = "";
 
@@ -53,6 +59,52 @@ namespace Project164Tamagotchi
             //display of scores and credits from one form to another
             lblScore.Text = Home.SetValueForText1;
             lblCredits.Text = Home.SetValueForText2;
+
+            // when form loads, data from serialized file will be uploaded
+            ReadDataFromFile("foodItems", foodItems);
+
+            //when the form loads hardcoded food items and cost already added onto dgv
+            Food fooditem1 = new Food("Apple", "Fruits and veg", 10);
+            foodItems.Add(fooditem1);
+            Food fooditem2 = new Food("Pie", "Fats and oils", 20);
+            foodItems.Add(fooditem2);
+            Food fooditem3 = new Food("Fish", "Protein", 30);
+            foodItems.Add(fooditem3);
+            Food fooditem4 = new Food("Rice", "Carbohydrates", 40);
+            foodItems.Add(fooditem4);
+            dgvData.DataSource = foodItems;
+
+            //calculates the credits for pantry
+            lblCredits.Text = dgvData.RowCount.ToString();
+            int total;
+            total = Convert.ToInt32(lblCredits.Text) * 10;
+            lblCredits.Text = Convert.ToString(total);
+
+            //code to add cost for each food type item
+            foreach (DataGridViewRow row in dgvData.Rows)
+            {
+                int ans1 = 5;
+                int ans2 = 10;
+                int ans3 = 15;
+                int ans4 = 20;
+                if ("Fruits and veg" == Convert.ToString(row.Cells[dgvData.Columns["Type"].Index].Value))
+                {
+                    row.Cells[dgvData.Columns["Cost"].Index].Value = ans1;
+                }
+                else if ("Fats and oils" == Convert.ToString(row.Cells[dgvData.Columns["Type"].Index].Value))
+                {
+                    row.Cells[dgvData.Columns["Cost"].Index].Value = ans2;
+                }
+                else if ("Protein" == Convert.ToString(row.Cells[dgvData.Columns["Type"].Index].Value))
+                {
+                    row.Cells[dgvData.Columns["Cost"].Index].Value = ans3;
+                }
+                else if ("Carbohydrates" == Convert.ToString(row.Cells[dgvData.Columns["Type"].Index].Value))
+                {
+                    row.Cells[dgvData.Columns["Cost"].Index].Value = ans4;
+                }
+
+            }
         }
 
         private void btnBack_Click(object sender, EventArgs e)
