@@ -120,5 +120,96 @@ namespace Project164Tamagotchi
             type = cbxType.Text;
             MessageBox.Show("Name:  " + food + "\n" + "Type:  " + type + "\n" + "After you add, cost will be deducted from score and can't be reversed");
         }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            // when the button add is clicked a new food item will be added onto the dgv
+            Food food1 = new Food();
+            food1.Name = txtName.Text;
+            food1.Type = cbxType.Text;
+            foodItems.Add(food1);
+            dgvData.DataSource = foodItems;
+
+            //code to subtract points after a user purchases something
+            if (Convert.ToInt32(lblScore.Text) >= 30 && cbxType.Text == "Carbohydrates")
+            {
+                int total;
+                total = Convert.ToInt32(lblScore.Text) - 20;
+                lblScore.Text = Convert.ToString(total);
+
+            }
+            else if (Convert.ToInt32(lblScore.Text) >= 30 && cbxType.Text == "Protein")
+            {
+                int total;
+                total = Convert.ToInt32(lblScore.Text) - 15;
+                lblScore.Text = Convert.ToString(total);
+
+            }
+            else if (Convert.ToInt32(lblScore.Text) >= 30 && cbxType.Text == "Fats and oils")
+            {
+                int total;
+                total = Convert.ToInt32(lblScore.Text) - 10;
+                lblScore.Text = Convert.ToString(total);
+
+            }
+            else if (Convert.ToInt32(lblScore.Text) >= 30 && cbxType.Text == "Fruits and veg")
+            {
+                int total;
+                total = Convert.ToInt32(lblScore.Text) - 5;
+                lblScore.Text = Convert.ToString(total);
+
+            }
+            else if (Convert.ToInt32(lblScore.Text) <= 30 && cbxType.Text == "Fruits and veg")
+            {
+                btnAdd.Enabled = false;
+
+            }
+            if (Convert.ToInt32(lblScore.Text) <= 30 && cbxType.Text == "Carbohydrates")
+            {
+                btnAdd.Enabled = false;
+
+            }
+            else if (Convert.ToInt32(lblScore.Text) <= 30 && cbxType.Text == "Protein")
+            {
+                btnAdd.Enabled = false;
+
+            }
+            else if (Convert.ToInt32(lblScore.Text) <= 30 && cbxType.Text == "Fats and oils")
+            {
+                btnAdd.Enabled = false;
+            }
+
+            //code to display credits after the user adds into the pantry library
+            lblHealth.Text = dgvData.RowCount.ToString();
+            int sum;
+            sum = Convert.ToInt32(lblHealth.Text) * 10;
+            lblHealth.Text = Convert.ToString(sum);
+
+            //code to add cost for each food type item
+            foreach (DataGridViewRow row in dgvData.Rows)
+            {
+                int ans1 = 5;
+                int ans2 = 10;
+                int ans3 = 15;
+                int ans4 = 20;
+                if ("Fruits and veg" == Convert.ToString(row.Cells[dgvData.Columns["Type"].Index].Value))
+                {
+                    row.Cells[dgvData.Columns["Cost"].Index].Value = ans1;
+                }
+                else if ("Fats and oils" == Convert.ToString(row.Cells[dgvData.Columns["Type"].Index].Value))
+                {
+                    row.Cells[dgvData.Columns["Cost"].Index].Value = ans2;
+                }
+                else if ("Protein" == Convert.ToString(row.Cells[dgvData.Columns["Type"].Index].Value))
+                {
+                    row.Cells[dgvData.Columns["Cost"].Index].Value = ans3;
+                }
+                else if ("Carbohydrates" == Convert.ToString(row.Cells[dgvData.Columns["Type"].Index].Value))
+                {
+                    row.Cells[dgvData.Columns["Cost"].Index].Value = ans4;
+                }
+
+            }
+        }
     }
 }

@@ -98,6 +98,7 @@
             this.btnAdd.TabIndex = 3;
             this.btnAdd.Text = "Add Food Item";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // txtName
             // 
