@@ -100,5 +100,16 @@ namespace Project164Tamagotchi
 
             }
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            //when user closes form, data will be saved onto serialized file
+            WriteDataToFile("foodItems", foodItems);
+            MessageBox.Show("Your data has been saved");
+
+            //messagebox so that the user clicks on the refresh button from tamagotchi home, in order to see updated code
+            MessageBox.Show("Don't forget to refresh to get an update");
+            this.Hide();
+        }
     }
 }
