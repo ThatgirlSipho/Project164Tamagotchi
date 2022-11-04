@@ -255,5 +255,17 @@ namespace Project164Tamagotchi
 
             return happiness;
         }
+
+        private void btnPlay_Click(object sender, EventArgs e)
+        {
+            PlayForm myform = new PlayForm();
+            myform.ShowDialog();
+        }
+
+        private void btnPantry_Click(object sender, EventArgs e)
+        {
+            StorageForm myform = new StorageForm(); 
+            myform = new StorageForm();
+        }
     }
 }

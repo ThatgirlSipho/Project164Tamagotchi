@@ -116,6 +116,7 @@
             this.btnPantry.TabIndex = 4;
             this.btnPantry.Text = "Pantry";
             this.btnPantry.UseVisualStyleBackColor = false;
+            this.btnPantry.Click += new System.EventHandler(this.btnPantry_Click);
             // 
             // btnPlay
             // 
@@ -127,6 +128,7 @@
             this.btnPlay.TabIndex = 5;
             this.btnPlay.Text = "Play";
             this.btnPlay.UseVisualStyleBackColor = false;
+            this.btnPlay.Click += new System.EventHandler(this.btnPlay_Click);
             // 
             // label2
             // 
