@@ -165,5 +165,12 @@ namespace Project164Tamagotchi
         {
             this.Close();
         }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            //when button is clicked, updated values from the pantry will display the new code and the new credits
+            lblScore.Text = StorageForm.SetValueForText1;
+            lblCredits.Text = StorageForm.SetValueForText2;
+        }
     }
 }
