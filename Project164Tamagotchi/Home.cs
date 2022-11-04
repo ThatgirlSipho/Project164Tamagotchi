@@ -158,5 +158,11 @@ namespace Project164Tamagotchi
         {
             this.Close();
         }
+
+        private void btnPlay_Click(object sender, EventArgs e)
+        {
+            PlayForm play = new PlayForm();
+            play.Show();
+        }
     }
 }

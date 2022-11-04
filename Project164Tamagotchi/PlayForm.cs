@@ -38,6 +38,10 @@ namespace Project164Tamagotchi
                 MessageBox.Show("Please enter only numbers!");
                 txtAnswer.Text = txtAnswer.Text.Remove(txtAnswer.Text.Length - 1);
             }
+            else if(txtAnswer.Text == null)
+            { 
+                MessageBox.Show("Please enter a value");
+            }
         }
         private void btnCheck_Click(object sender, EventArgs e)
         {
@@ -116,5 +120,10 @@ namespace Project164Tamagotchi
 
         }
 
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            Home homeForm = new Home();
+            homeForm.Show();
+        }
     }    
 }
