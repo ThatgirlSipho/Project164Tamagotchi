@@ -74,7 +74,7 @@ namespace Project164Tamagotchi
             //each tick is 2 seconds long and maximum sleep is 20 seconds
             sleep += 1;
             lblSleep.Text = Convert.ToString(sleep);
-            if (sleep >= 100) //When sleep levels are full, pet wakes up
+            if (sleep == 100) //When sleep levels are full, pet wakes up
             {
                 timerSleep.Stop();
                 timerAwake.Start();
@@ -181,12 +181,12 @@ namespace Project164Tamagotchi
         {
             happy = Happiness(sleep, credit, health);
             lblHappiness.Text = Convert.ToString(happy) + "%";
-            if (happy <=0)
+            if (happy <=0 && timerSleep.Enabled != true)
             {
                 pictureBox1.Image = Properties.Resources.casket;
                 MessageBox.Show(name + " is dead. Are you happy now?");
             }
-            else if ( happy > 0 && happy <= 20)
+            else if ( happy == 20 && timerSleep.Enabled != true)
             {
                 MessageBox.Show("I am about to DIE. HELP ME");
                 if (name == "Fiona")
@@ -198,7 +198,7 @@ namespace Project164Tamagotchi
                     pictureBox1.Image = Properties.Resources.Shrek_Angry;
                 }
             }
-            else if (happy == 40)
+            else if (happy == 40 && timerSleep.Enabled != true)
             {
                 MessageBox.Show("I am getting worried. Help should come anytime soon");
                 if (name == "Fiona")
@@ -210,7 +210,7 @@ namespace Project164Tamagotchi
                     pictureBox1.Image = Properties.Resources.Shrek_Worried;
                 }
             }
-            else if (happy == 60)
+            else if (happy == 60 && timerSleep.Enabled != true )
             {
                 
                 if (name == "Fiona")
@@ -222,7 +222,7 @@ namespace Project164Tamagotchi
                     pictureBox1.Image = Properties.Resources.Shrek_Nervous;
                 }
             }
-            else if (happy == 80)
+            else if (happy == 80 && timerSleep.Enabled != true)
             {
                 if (name == "Fiona")
                 {
@@ -233,7 +233,7 @@ namespace Project164Tamagotchi
                     pictureBox1.Image = Properties.Resources.Shrek_Satisfied;
                 }
             }
-            else if (happy ==100 )
+            else if (happy ==100 && timerSleep.Enabled != true)
             {
                 
                 if (name == "Fiona")
