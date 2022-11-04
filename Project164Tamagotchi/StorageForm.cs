@@ -19,6 +19,8 @@ namespace Project164Tamagotchi
         {
             InitializeComponent();
         }
+        public static string SetValueForText1 = "";
+        public static string SetValueForText2 = "";
 
         //serialization method to write data of food items to file
         public void WriteDataToFile(string listName, BindingList<Food> foodItems)
@@ -48,12 +50,24 @@ namespace Project164Tamagotchi
         }
         private void StorageForm_Load(object sender, EventArgs e)
         {
-
+            //display of scores and credits from one form to another
+            lblScore.Text = Home.SetValueForText1;
+            lblCredits.Text = Home.SetValueForText2;
         }
 
         private void btnBack_Click(object sender, EventArgs e)
         {
+            //when the button is clicked, data from the label will be passed to the tamagotchi home form
+            SetValueForText1 = lblScore.Text;
+            SetValueForText2 = lblCredits.Text;
 
+            //when user closes form, data will be saved onto serialized file
+            WriteDataToFile("foodItems", foodItems);
+            MessageBox.Show("Your data has been saved");
+
+            //messagebox so that the user clicks on the refresh button from tamagotchi home, in order to see updated code
+            MessageBox.Show("Don't forget to refresh to get an update");
+            this.Hide();
         }
     }
 }

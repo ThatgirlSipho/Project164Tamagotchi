@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblCredits = new System.Windows.Forms.Label();
+            this.lblScore = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnConfirm = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
@@ -62,23 +62,23 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Food Storage";
             // 
-            // label6
+            // lblCredits
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(1045, 82);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(30, 25);
-            this.label6.TabIndex = 12;
-            this.label6.Text = "50";
+            this.lblCredits.AutoSize = true;
+            this.lblCredits.Location = new System.Drawing.Point(1045, 82);
+            this.lblCredits.Name = "lblCredits";
+            this.lblCredits.Size = new System.Drawing.Size(30, 25);
+            this.lblCredits.TabIndex = 12;
+            this.lblCredits.Text = "50";
             // 
-            // label5
+            // lblScore
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(1045, 47);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(39, 25);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "200";
+            this.lblScore.AutoSize = true;
+            this.lblScore.Location = new System.Drawing.Point(1045, 47);
+            this.lblScore.Name = "lblScore";
+            this.lblScore.Size = new System.Drawing.Size(39, 25);
+            this.lblScore.TabIndex = 11;
+            this.lblScore.Text = "200";
             // 
             // groupBox1
             // 
@@ -261,8 +261,8 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.dgvData);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.lblCredits);
+            this.Controls.Add(this.lblScore);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Papyrus", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -280,8 +280,8 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblCredits;
+        private System.Windows.Forms.Label lblScore;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnConfirm;
         private System.Windows.Forms.Button btnAdd;
