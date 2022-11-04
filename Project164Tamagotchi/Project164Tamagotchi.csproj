@@ -79,6 +79,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\Shrek song.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Shrek song.resx</DependentUpon>
+    </Compile>
     <Compile Include="StorageForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +116,10 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Resources\Shrek song.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Shrek song.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="StorageForm.resx">
       <DependentUpon>StorageForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -171,6 +180,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Waking up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shrek.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
