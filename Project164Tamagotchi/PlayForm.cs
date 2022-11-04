@@ -120,10 +120,6 @@ namespace Project164Tamagotchi
 
         }
 
-        private void btnHome_Click(object sender, EventArgs e)
-        {
-            Home homeForm = new Home();
-            homeForm.Show();
-        }
+      
     }    
 }

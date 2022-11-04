@@ -39,7 +39,6 @@
             this.lblCredit = new System.Windows.Forms.Label();
             this.gameTimer = new System.Windows.Forms.Timer(this.components);
             this.lblTimeLeft = new System.Windows.Forms.Label();
-            this.btnHome = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnCheck
@@ -138,25 +137,12 @@
             this.lblTimeLeft.TabIndex = 8;
             this.lblTimeLeft.Text = "Time Left:";
             // 
-            // btnHome
-            // 
-            this.btnHome.BackColor = System.Drawing.Color.YellowGreen;
-            this.btnHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHome.Location = new System.Drawing.Point(576, 270);
-            this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(113, 55);
-            this.btnHome.TabIndex = 9;
-            this.btnHome.Text = "Home";
-            this.btnHome.UseVisualStyleBackColor = false;
-            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
-            // 
             // PlayForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MediumSpringGreen;
             this.ClientSize = new System.Drawing.Size(800, 351);
-            this.Controls.Add(this.btnHome);
             this.Controls.Add(this.lblTimeLeft);
             this.Controls.Add(this.lblCredit);
             this.Controls.Add(this.txtAnswer);
@@ -186,6 +172,5 @@
         private System.Windows.Forms.Label lblCredit;
         private System.Windows.Forms.Timer gameTimer;
         private System.Windows.Forms.Label lblTimeLeft;
-        private System.Windows.Forms.Button btnHome;
     }
 }
