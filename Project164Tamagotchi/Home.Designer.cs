@@ -34,7 +34,6 @@
             this.timerAwake = new System.Windows.Forms.Timer(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.lblSleep = new System.Windows.Forms.Label();
-            this.lblName = new System.Windows.Forms.Label();
             this.btnPantry = new System.Windows.Forms.Button();
             this.btnPlay = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -46,6 +45,9 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnRefresh = new System.Windows.Forms.Button();
+            this.lblName = new System.Windows.Forms.Label();
+            this.lblScore = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -97,18 +99,6 @@
             this.lblSleep.Size = new System.Drawing.Size(18, 24);
             this.lblSleep.TabIndex = 2;
             this.lblSleep.Text = ".";
-            // 
-            // lblName
-            // 
-            this.lblName.AutoSize = true;
-            this.lblName.Font = new System.Drawing.Font("Ravie", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.ForeColor = System.Drawing.Color.Sienna;
-            this.lblName.Location = new System.Drawing.Point(476, 42);
-            this.lblName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(199, 63);
-            this.lblName.TabIndex = 3;
-            this.lblName.Text = "Name";
             // 
             // btnPantry
             // 
@@ -242,12 +232,50 @@
             this.btnRefresh.Text = "🔁";
             this.btnRefresh.UseVisualStyleBackColor = false;
             // 
+            // lblName
+            // 
+            this.lblName.AutoSize = true;
+            this.lblName.Font = new System.Drawing.Font("Ravie", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.ForeColor = System.Drawing.Color.Sienna;
+            this.lblName.Location = new System.Drawing.Point(476, 42);
+            this.lblName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(199, 63);
+            this.lblName.TabIndex = 3;
+            this.lblName.Text = "Name";
+            // 
+            // lblScore
+            // 
+            this.lblScore.AutoSize = true;
+            this.lblScore.Font = new System.Drawing.Font("Ravie", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblScore.ForeColor = System.Drawing.Color.Sienna;
+            this.lblScore.Location = new System.Drawing.Point(1079, 163);
+            this.lblScore.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblScore.Name = "lblScore";
+            this.lblScore.Size = new System.Drawing.Size(103, 63);
+            this.lblScore.TabIndex = 15;
+            this.lblScore.Text = "30";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Ravie", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Sienna;
+            this.label5.Location = new System.Drawing.Point(894, 163);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(177, 63);
+            this.label5.TabIndex = 16;
+            this.label5.Text = "Gold:";
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.ClientSize = new System.Drawing.Size(1200, 692);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.lblScore);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnClose);
@@ -280,7 +308,6 @@
         private System.Windows.Forms.Timer timerAwake;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblSleep;
-        private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Button btnPantry;
         private System.Windows.Forms.Button btnPlay;
         private System.Windows.Forms.Label label2;
@@ -292,5 +319,8 @@
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnRefresh;
+        private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.Label lblScore;
+        private System.Windows.Forms.Label label5;
     }
 }
