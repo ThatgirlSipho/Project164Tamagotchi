@@ -246,7 +246,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.YellowGreen;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.ClientSize = new System.Drawing.Size(1200, 692);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.pictureBox1);
