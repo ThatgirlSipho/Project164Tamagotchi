@@ -168,5 +168,53 @@ namespace Project164Tamagotchi
             Information newForm = new Information();
             newForm.Show();
         }
+
+        private void btnStats_Click(object sender, EventArgs e)
+        {
+            //calculates how much food item is in the food storage for the tamagotchi
+            string value;
+            int total = 0;
+            int count = 0;
+            int countFruitsandveg = 0;
+            int countFatsAndOils = 0;
+            int countProtein = 0;
+            int countCarbohydrates = 0;
+            for (int i = 0; i < dgvData.Columns.Count; i++)
+            {
+                for (int j = 0; j < dgvData.Rows.Count - 1; j++)
+                {
+                    value = Convert.ToString(dgvData[i, j].Value);
+                    if (value == "Fruits and veg")
+                    {
+                        countFruitsandveg += 1;
+
+                    }
+                    else if (value == "Fats and oils")
+                    {
+                        countFatsAndOils += 1;
+                    }
+                    else if (value == "Protein")
+                    {
+                        countProtein += 1;
+                    }
+                    else if (value == "Carbohydrates")
+                    {
+                        countCarbohydrates += 1;
+                    }
+
+                    count++;
+                    total = countFruitsandveg + countFatsAndOils + countProtein + countCarbohydrates;
+
+                }
+            }
+
+            //displays the amount of food item from datagrid
+            MessageBox.Show("Fruits and veg:" + " " + countFruitsandveg + "\n" +
+                "Fats and oils:" + " " + countFatsAndOils + "\n" +
+                "Protein:" + " " + countProtein + "\n" +
+                "Carbohydrates:" + " " + countCarbohydrates + "\n" +
+                "Total Food Items:" + " " + total.ToString());
+
+        }
     }
 }
