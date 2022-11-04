@@ -16,5 +16,12 @@ namespace Project164Tamagotchi
         {
             InitializeComponent();
         }
+        public Food foodToUpdate;
+        private void frmEdit_Load(object sender, EventArgs e)
+        {
+            //when the form opens, all information from selected index will be shown
+            txtName.Text = foodToUpdate.Name;
+            cbxType.Text = foodToUpdate.Type;
+        }
     }
 }
