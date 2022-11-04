@@ -53,11 +53,19 @@ namespace Project164Tamagotchi
         BindingList<Food> foodItems = new BindingList<Food>();
         public static string SetValueForText1 = "";
         public static string SetValueForText2 = "";
+        string name;
+        //object
+        private Tamagotchi petPantry;
+        public Tamagotchi PetPantry
+        {
+            get { return petPantry; }
+        }
 
         private void StorageForm_Load(object sender, EventArgs e)
         {
+            name = PetPantry.Character;
             //when form loads, data from serialized file will be uploaded
-            ReadDataFromFile("foodItems", foodItems);
+            ReadDataFromFile(name+"foodItems", foodItems);
 
             //display of scores and credits from one form to another
             lblScore.Text = Home.SetValueForText1;
@@ -115,7 +123,7 @@ namespace Project164Tamagotchi
 
 
             //when user closes form, data will be saved onto serialized file
-            WriteDataToFile("foodItems", foodItems);
+            WriteDataToFile(name+"foodItems", foodItems);
             MessageBox.Show("Your data has been saved");
 
             //messagebox so that the user clicks on the refresh button from tamagotchi home, in order to see updated code
