@@ -56,7 +56,13 @@ namespace Project164Tamagotchi
             set { mCredit = value; }
         }
 
-       
+        public int Happiness(int petSleep, int petCredit, int petHealth)
+        {
+            int happiness = petCredit + petHealth + petSleep;
+            happiness = happiness / 3;
+
+            return happiness;
+        }
 
     }
 }

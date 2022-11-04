@@ -18,7 +18,6 @@ namespace Project164Tamagotchi
         string[] Maths = { "Add", "Subtract", "Multiply" };
         int total;
         int score;
-        int credits = 0;
         int timeLeft;
         public PlayForm()
         {

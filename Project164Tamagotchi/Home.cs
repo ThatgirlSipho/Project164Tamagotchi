@@ -58,7 +58,7 @@ namespace Project164Tamagotchi
             }
 
            
-            pet = ReadDataFromFile(name) as Tamagotchi;
+            petHome = ReadDataFromFile(name) as Tamagotchi;
             
            
 
