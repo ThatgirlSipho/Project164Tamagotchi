@@ -230,5 +230,14 @@ namespace Project164Tamagotchi
             sum = Convert.ToInt32(lblCredits.Text) * 10;
             lblCredits.Text = Convert.ToString(sum);
         }
+
+        private void btnConfirm_Click(object sender, EventArgs e)
+        {
+            //a button the user clicks before they add an item onto the dgv
+            string food, type;
+            food = txtName.Text;
+            type = cbxType.Text;
+            MessageBox.Show("Name:  " + food + "\n" + "Type:  " + type + "\n" + "After you add, cost will be deducted from score and can't be reversed");
+        }
     }
 }
