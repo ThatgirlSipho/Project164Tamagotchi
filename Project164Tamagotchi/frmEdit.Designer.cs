@@ -67,6 +67,7 @@
             this.btnAddEdit.TabIndex = 3;
             this.btnAddEdit.Text = "Add Food Item";
             this.btnAddEdit.UseVisualStyleBackColor = true;
+            this.btnAddEdit.Click += new System.EventHandler(this.btnAddEdit_Click);
             // 
             // label4
             // 

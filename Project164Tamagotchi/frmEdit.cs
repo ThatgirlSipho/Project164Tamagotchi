@@ -23,5 +23,14 @@ namespace Project164Tamagotchi
             txtName.Text = foodToUpdate.Name;
             cbxType.Text = foodToUpdate.Type;
         }
+
+        private void btnAddEdit_Click(object sender, EventArgs e)
+        {
+            //when the button edit is clicked, all items edited will be added onto the dgv
+            foodToUpdate.Name = txtName.Text;
+            foodToUpdate.Type = cbxType.Text;
+
+            this.Close();
+        }
     }
 }
