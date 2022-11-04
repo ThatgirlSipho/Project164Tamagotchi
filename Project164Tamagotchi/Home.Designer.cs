@@ -40,7 +40,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lblPlay = new System.Windows.Forms.Label();
-            this.lblHealth = new System.Windows.Forms.Label();
+            this.lblCredits = new System.Windows.Forms.Label();
             this.lblHappiness = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
@@ -156,7 +156,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(97, 24);
             this.label3.TabIndex = 7;
-            this.label3.Text = "Health:";
+            this.label3.Text = "Pantry";
             // 
             // lblPlay
             // 
@@ -170,17 +170,17 @@
             this.lblPlay.TabIndex = 8;
             this.lblPlay.Text = ".";
             // 
-            // lblHealth
+            // lblCredits
             // 
-            this.lblHealth.AutoSize = true;
-            this.lblHealth.Font = new System.Drawing.Font("Ravie", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHealth.ForeColor = System.Drawing.Color.Sienna;
-            this.lblHealth.Location = new System.Drawing.Point(630, 495);
-            this.lblHealth.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblHealth.Name = "lblHealth";
-            this.lblHealth.Size = new System.Drawing.Size(18, 24);
-            this.lblHealth.TabIndex = 9;
-            this.lblHealth.Text = ".";
+            this.lblCredits.AutoSize = true;
+            this.lblCredits.Font = new System.Drawing.Font("Ravie", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCredits.ForeColor = System.Drawing.Color.Sienna;
+            this.lblCredits.Location = new System.Drawing.Point(630, 495);
+            this.lblCredits.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCredits.Name = "lblCredits";
+            this.lblCredits.Size = new System.Drawing.Size(18, 24);
+            this.lblCredits.TabIndex = 9;
+            this.lblCredits.Text = ".";
             // 
             // lblHappiness
             // 
@@ -253,7 +253,7 @@
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.lblHappiness);
-            this.Controls.Add(this.lblHealth);
+            this.Controls.Add(this.lblCredits);
             this.Controls.Add(this.lblPlay);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -286,7 +286,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblPlay;
-        private System.Windows.Forms.Label lblHealth;
+        private System.Windows.Forms.Label lblCredits;
         private System.Windows.Forms.Label lblHappiness;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnClose;
