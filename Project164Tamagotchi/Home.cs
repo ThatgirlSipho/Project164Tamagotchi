@@ -22,8 +22,8 @@ namespace Project164Tamagotchi
 
 
 
-        public Tamagotchi pet = new Tamagotchi();// Tamagotchi object that can be accessed in all forms
-        private Tamagotchi petHome;
+        public Tamagotchi pet = new Tamagotchi();// Tamagotchi object that will recieve the name from Form 1
+        private Tamagotchi petHome; // proper object for form
         public Tamagotchi PetPlay
         {
             get { return petHome; }
@@ -41,8 +41,8 @@ namespace Project164Tamagotchi
 
             timerAwake.Start(); //sleep levels deplete from program open
             timerHappiness.Start();
-            sleep = 100; //Sleep levels start high
-            lblSleep.Text = Convert.ToString(sleep); //display the sleep levels
+            sleep = 100; 
+            lblSleep.Text = Convert.ToString(sleep); 
             lblPlay.Text = Convert.ToString(credit);
             lblHealth.Text = Convert.ToString(health);
             lblName.Text = pet.Character;
@@ -60,7 +60,6 @@ namespace Project164Tamagotchi
            
             petHome = ReadDataFromFile(name) as Tamagotchi;
             
-           
 
         }
 
@@ -68,6 +67,7 @@ namespace Project164Tamagotchi
         private void btnSleep_Click(object sender, EventArgs e)
         {
             timerSleep.Start();
+
         }
 
 
@@ -76,20 +76,21 @@ namespace Project164Tamagotchi
 
         private void timerSleep_Tick(object sender, EventArgs e)
         {
-            //each tick is 2 seconds long and maximum sleep is 20 seconds
+           
             sleep += 1;
             lblSleep.Text = Convert.ToString(sleep);
             if (sleep == 100) //When sleep levels are full, pet wakes up
             {
                 timerSleep.Stop();
                 timerAwake.Start();
+                pictureBox1.Image = Properties.Resources.Waking_up;
             }
-            if (name == "Fiona")
+            if (name == "Fiona" && sleep <100)
             {
                 pictureBox1.Image = Properties.Resources.Fiona_Sleeping;
 
             }
-            else
+            else if (name == "Shrek" && sleep < 100)
             {
                 pictureBox1.Image = Properties.Resources.Shrek_Sleeping;
             }
@@ -206,7 +207,7 @@ namespace Project164Tamagotchi
             }
             else if (happy == 40 && timerSleep.Enabled != true)
             {
-                MessageBox.Show("I am getting worried. Help should come anytime soon");
+               
                 if (name == "Fiona")
                 {
                     pictureBox1.Image = Properties.Resources.Fiona_Worried;
