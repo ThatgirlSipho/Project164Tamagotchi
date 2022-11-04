@@ -38,6 +38,9 @@ namespace Project164Tamagotchi
 
         private void Home_Load(object sender, EventArgs e)
         {
+            //code to pass values from the label from this form to the pantry form
+            SetValueForText1 = lblPlay.Text;
+            SetValueForText2 = lblHealth.Text;
 
             timerAwake.Start(); //sleep levels deplete from program open
             timerHappiness.Start();
@@ -276,5 +279,9 @@ namespace Project164Tamagotchi
             myform = new StorageForm();
             
         }
+
+        //code to pass values from the label from this form to the pantry form
+        public static string SetValueForText1 = "";
+        public static string SetValueForText2 = "";
     }
 }
