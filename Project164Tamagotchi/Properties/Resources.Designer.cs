@@ -93,6 +93,16 @@ namespace Project164Tamagotchi.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap Fiona_Nervous {
+            get {
+                object obj = ResourceManager.GetObject("Fiona_Nervous", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap fiona_satisdied {
             get {
                 object obj = ResourceManager.GetObject("fiona_satisdied", resourceCulture);
@@ -123,9 +133,39 @@ namespace Project164Tamagotchi.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap Shrek_Angry {
+            get {
+                object obj = ResourceManager.GetObject("Shrek_Angry", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap Shrek_Happy {
             get {
                 object obj = ResourceManager.GetObject("Shrek_Happy", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Shrek_Nervous {
+            get {
+                object obj = ResourceManager.GetObject("Shrek_Nervous", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Shrek_Satisfied {
+            get {
+                object obj = ResourceManager.GetObject("Shrek_Satisfied", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

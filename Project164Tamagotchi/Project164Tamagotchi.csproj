@@ -138,5 +138,17 @@
   <ItemGroup>
     <None Include="Resources\Shrek Worried.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shrek Angry.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shrek Satisfied.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shrek Nervous.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fiona Nervous.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
