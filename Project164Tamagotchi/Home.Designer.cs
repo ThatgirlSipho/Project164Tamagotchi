@@ -135,11 +135,11 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Ravie", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label2.Location = new System.Drawing.Point(144, 320);
+            this.label2.Location = new System.Drawing.Point(135, 322);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(47, 17);
+            this.label2.Size = new System.Drawing.Size(64, 17);
             this.label2.TabIndex = 6;
-            this.label2.Text = "Play:";
+            this.label2.Text = "Credit:";
             // 
             // label3
             // 
@@ -157,7 +157,7 @@
             this.lblPlay.AutoSize = true;
             this.lblPlay.Font = new System.Drawing.Font("Ravie", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPlay.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblPlay.Location = new System.Drawing.Point(186, 322);
+            this.lblPlay.Location = new System.Drawing.Point(196, 322);
             this.lblPlay.Name = "lblPlay";
             this.lblPlay.Size = new System.Drawing.Size(13, 17);
             this.lblPlay.TabIndex = 8;

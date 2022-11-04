@@ -26,7 +26,7 @@ namespace Project164Tamagotchi
         int sleep;
         string name; //Sharon copy this
         int health = 50;
-        int credit = 100;
+        int credit = 0;
         int happy;
 
         
@@ -259,14 +259,15 @@ namespace Project164Tamagotchi
         {
             PlayForm myform = new PlayForm();
             myform.ShowDialog();
-            this.Hide();
+            
+            
         }
 
         private void btnPantry_Click(object sender, EventArgs e)
         {
             StorageForm myform = new StorageForm(); 
             myform = new StorageForm();
-            this.Hide();
+            
         }
     }
 }

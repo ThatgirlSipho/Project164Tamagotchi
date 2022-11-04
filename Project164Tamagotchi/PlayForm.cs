@@ -26,6 +26,8 @@ namespace Project164Tamagotchi
             SetUpGame();
         }
 
+        public Tamagotchi petPlay;
+
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -54,6 +56,7 @@ namespace Project164Tamagotchi
                 lblAnswer.Text = "Correct";
                 lblAnswer.ForeColor = Color.Green;
                 score += 10;
+
                 lblScore.Text = "Score: " + score;
                 SetUpGame();
 
