@@ -47,9 +47,58 @@ namespace Project164Tamagotchi
             catch (FileNotFoundException)
             { MessageBox.Show("The data file could not be found"); }
         }
+
+        //global variables
+        public Food foodToUpdate;
+        BindingList<Food> foodItems = new BindingList<Food>();
+
         private void StorageForm_Load(object sender, EventArgs e)
         {
+            //when form loads, data from serialized file will be uploaded
+            ReadDataFromFile("foodItems", foodItems);
 
+            //when the form loads hardcoded food items and cost already added onto dgv
+            Food fooditem1 = new Food("Apple", "Fruits and veg", 10);
+            foodItems.Add(fooditem1);
+            Food fooditem2 = new Food("Pie", "Fats and oils", 20);
+            foodItems.Add(fooditem2);
+            Food fooditem3 = new Food("Fish", "Protein", 30);
+            foodItems.Add(fooditem3);
+            Food fooditem4 = new Food("Rice", "Carbohydrates", 40);
+            foodItems.Add(fooditem4);
+            dgvData.DataSource = foodItems;
+
+            //calculates the credits for pantry
+            lblHealth.Text = dgvData.RowCount.ToString();
+            int total;
+            total = Convert.ToInt32(lblHealth.Text) * 10;
+            lblHealth.Text = Convert.ToString(total);
+
+            //code to add cost for each food type item
+            foreach (DataGridViewRow row in dgvData.Rows)
+            {
+                int ans1 = 5;
+                int ans2 = 10;
+                int ans3 = 15;
+                int ans4 = 20;
+                if ("Fruits and veg" == Convert.ToString(row.Cells[dgvData.Columns["Type"].Index].Value))
+                {
+                    row.Cells[dgvData.Columns["Cost"].Index].Value = ans1;
+                }
+                else if ("Fats and oils" == Convert.ToString(row.Cells[dgvData.Columns["Type"].Index].Value))
+                {
+                    row.Cells[dgvData.Columns["Cost"].Index].Value = ans2;
+                }
+                else if ("Protein" == Convert.ToString(row.Cells[dgvData.Columns["Type"].Index].Value))
+                {
+                    row.Cells[dgvData.Columns["Cost"].Index].Value = ans3;
+                }
+                else if ("Carbohydrates" == Convert.ToString(row.Cells[dgvData.Columns["Type"].Index].Value))
+                {
+                    row.Cells[dgvData.Columns["Cost"].Index].Value = ans4;
+                }
+
+            }
         }
     }
 }
