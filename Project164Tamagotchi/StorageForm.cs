@@ -16,5 +16,10 @@ namespace Project164Tamagotchi
         {
             InitializeComponent();
         }
+
+        private void StorageForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
