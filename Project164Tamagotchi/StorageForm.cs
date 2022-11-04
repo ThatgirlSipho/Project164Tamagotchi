@@ -216,5 +216,19 @@ namespace Project164Tamagotchi
                 "Total Food Items:" + " " + total.ToString());
 
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            //when the button delete is clicked, the selected row information will be deleted
+            int selectedRowIndexex = 0;
+            Food foodItemToRemove = foodItems[selectedRowIndexex];
+            foodItems.Remove(foodItemToRemove);
+
+            //code to display credits after the user deletes from the pantry library
+            lblCredits.Text = dgvData.RowCount.ToString();
+            int sum;
+            sum = Convert.ToInt32(lblCredits.Text) * 10;
+            lblCredits.Text = Convert.ToString(sum);
+        }
     }
 }
