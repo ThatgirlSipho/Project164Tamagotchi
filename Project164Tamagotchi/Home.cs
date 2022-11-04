@@ -22,7 +22,12 @@ namespace Project164Tamagotchi
 
 
 
-        public Tamagotchi pet = new Tamagotchi(); // Tamagotchi object that can be accessed in all forms
+        public Tamagotchi pet = new Tamagotchi();// Tamagotchi object that can be accessed in all forms
+        private Tamagotchi petHome;
+        public Tamagotchi PetPlay
+        {
+            get { return petHome; }
+        }
         int sleep;
         string name; //Sharon copy this
         int health = 50;
@@ -130,6 +135,7 @@ namespace Project164Tamagotchi
             BinaryFormatter bFormatter = new BinaryFormatter();
             bFormatter.Serialize(outFile, digipet);
             outFile.Close();
+            MessageBox.Show("Your sata has been saved!");
         }
 
 
@@ -158,12 +164,12 @@ namespace Project164Tamagotchi
 
             try
             {
-
-                pet.Health = health;
-                pet.Credit = credit;
-                pet.Character = lblName.Text;
-                pet.Sleep = sleep;
-                WriteDataToFile(name, pet);
+                petHome = new Tamagotchi();
+                petHome.Health = health;
+                petHome.Credit = credit;
+                petHome.Character = lblName.Text;
+                petHome.Sleep = sleep;
+                WriteDataToFile(name, petHome);
 
             }
             catch (NullReferenceException)
