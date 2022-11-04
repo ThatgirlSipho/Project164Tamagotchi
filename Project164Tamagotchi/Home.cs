@@ -22,22 +22,30 @@ namespace Project164Tamagotchi
 
 
 
-        public Tamagotchi pet = new Tamagotchi(); // Tamagotchi object that can be accessed in all forms
+        public Tamagotchi pet = new Tamagotchi();// Tamagotchi object that will recieve the name from Form 1
+        private Tamagotchi petHome; // proper object for form
+        public Tamagotchi PetPlay
+        {
+            get { return petHome; }
+        }
         int sleep;
         string name; //Sharon copy this
         int health = 50;
-        int credit = 100;
+        int credit = 10;
         int happy;
 
         
 
         private void Home_Load(object sender, EventArgs e)
         {
+            //code to pass values from the label from this form to the pantry form
+            SetValueForText1 = lblPlay.Text;
+            SetValueForText2 = lblHealth.Text;
 
             timerAwake.Start(); //sleep levels deplete from program open
             timerHappiness.Start();
-            sleep = 100; //Sleep levels start high
-            lblSleep.Text = Convert.ToString(sleep); //display the sleep levels
+            sleep = 100; 
+            lblSleep.Text = Convert.ToString(sleep); 
             lblPlay.Text = Convert.ToString(credit);
             lblHealth.Text = Convert.ToString(health);
             lblName.Text = pet.Character;
@@ -53,9 +61,8 @@ namespace Project164Tamagotchi
             }
 
            
-            pet = ReadDataFromFile(name) as Tamagotchi;
+            petHome = ReadDataFromFile(name) as Tamagotchi;
             
-           
 
         }
 
@@ -63,6 +70,7 @@ namespace Project164Tamagotchi
         private void btnSleep_Click(object sender, EventArgs e)
         {
             timerSleep.Start();
+
         }
 
 
@@ -71,20 +79,21 @@ namespace Project164Tamagotchi
 
         private void timerSleep_Tick(object sender, EventArgs e)
         {
-            //each tick is 2 seconds long and maximum sleep is 20 seconds
+           
             sleep += 1;
             lblSleep.Text = Convert.ToString(sleep);
-            if (sleep >= 100) //When sleep levels are full, pet wakes up
+            if (sleep == 100) //When sleep levels are full, pet wakes up
             {
                 timerSleep.Stop();
                 timerAwake.Start();
+                pictureBox1.Image = Properties.Resources.Waking_up;
             }
-            if (name == "Fiona")
+            if (name == "Fiona" && sleep <100)
             {
                 pictureBox1.Image = Properties.Resources.Fiona_Sleeping;
 
             }
-            else
+            else if (name == "Shrek" && sleep < 100)
             {
                 pictureBox1.Image = Properties.Resources.Shrek_Sleeping;
             }
@@ -130,6 +139,7 @@ namespace Project164Tamagotchi
             BinaryFormatter bFormatter = new BinaryFormatter();
             bFormatter.Serialize(outFile, digipet);
             outFile.Close();
+            MessageBox.Show("Your sata has been saved!");
         }
 
 
@@ -158,15 +168,15 @@ namespace Project164Tamagotchi
 
             try
             {
-
-                pet.Health = health;
-                pet.Credit = credit;
-                pet.Character = lblName.Text;
-                pet.Sleep = sleep;
-                WriteDataToFile(name, pet);
+                petHome = new Tamagotchi();
+                petHome.Health = health;
+                petHome.Credit = credit;
+                petHome.Character = lblName.Text;
+                petHome.Sleep = sleep;
+                WriteDataToFile(name, petHome);
 
             }
-            catch (Exception)
+            catch (NullReferenceException)
             {
                 MessageBox.Show(" Your data has been saved");
             }
@@ -181,12 +191,12 @@ namespace Project164Tamagotchi
         {
             happy = Happiness(sleep, credit, health);
             lblHappiness.Text = Convert.ToString(happy) + "%";
-            if (happy <=0)
+            if (happy <=0 && timerSleep.Enabled != true)
             {
                 pictureBox1.Image = Properties.Resources.casket;
                 MessageBox.Show(name + " is dead. Are you happy now?");
             }
-            else if ( happy > 0 && happy <= 20)
+            else if ( happy == 20 && timerSleep.Enabled != true)
             {
                 MessageBox.Show("I am about to DIE. HELP ME");
                 if (name == "Fiona")
@@ -198,9 +208,9 @@ namespace Project164Tamagotchi
                     pictureBox1.Image = Properties.Resources.Shrek_Angry;
                 }
             }
-            else if (happy == 40)
+            else if (happy == 40 && timerSleep.Enabled != true)
             {
-                MessageBox.Show("I am getting worried. Help should come anytime soon");
+               
                 if (name == "Fiona")
                 {
                     pictureBox1.Image = Properties.Resources.Fiona_Worried;
@@ -210,7 +220,7 @@ namespace Project164Tamagotchi
                     pictureBox1.Image = Properties.Resources.Shrek_Worried;
                 }
             }
-            else if (happy == 60)
+            else if (happy == 60 && timerSleep.Enabled != true )
             {
                 
                 if (name == "Fiona")
@@ -222,7 +232,7 @@ namespace Project164Tamagotchi
                     pictureBox1.Image = Properties.Resources.Shrek_Nervous;
                 }
             }
-            else if (happy == 80)
+            else if (happy == 80 && timerSleep.Enabled != true)
             {
                 if (name == "Fiona")
                 {
@@ -233,7 +243,7 @@ namespace Project164Tamagotchi
                     pictureBox1.Image = Properties.Resources.Shrek_Satisfied;
                 }
             }
-            else if (happy ==100 )
+            else if (happy ==100 && timerSleep.Enabled != true)
             {
                 
                 if (name == "Fiona")
@@ -259,14 +269,26 @@ namespace Project164Tamagotchi
         {
             PlayForm myform = new PlayForm();
             myform.ShowDialog();
-            this.Hide();
+            credit += myform.PetPlay.Credit;
+            
         }
 
         private void btnPantry_Click(object sender, EventArgs e)
         {
             StorageForm myform = new StorageForm(); 
             myform = new StorageForm();
-            this.Hide();
+            
+        }
+
+        //code to pass values from the label from this form to the pantry form
+        public static string SetValueForText1 = "";
+        public static string SetValueForText2 = "";
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            //when button is clicked, updated values from the pantry will display the new code and the new credits
+            lblPlay.Text = StorageForm.SetValueForText1;
+            lblHealth.Text = StorageForm.SetValueForText2;
         }
     }
 }

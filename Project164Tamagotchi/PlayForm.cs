@@ -18,13 +18,19 @@ namespace Project164Tamagotchi
         string[] Maths = { "Add", "Subtract", "Multiply" };
         int total;
         int score;
-        int credits = 0;
         int timeLeft;
         public PlayForm()
         {
             InitializeComponent();
             SetUpGame();
         }
+
+        private Tamagotchi petPlay;
+        public Tamagotchi  PetPlay
+        {
+            get { return petPlay; }
+        }
+        
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -56,6 +62,8 @@ namespace Project164Tamagotchi
                 score += 1;
                 lblScore.Text = "Score: " + Convert.ToString(score);
                 SetUpGame();
+                petPlay = new Tamagotchi();
+                petPlay.Credit = score;
 
             }
             else

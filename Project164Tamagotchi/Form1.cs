@@ -12,9 +12,15 @@ namespace Project164Tamagotchi
 {
     public partial class Form1 : Form
     {
+        //Create mediaplayer
+        WindowsMediaPlayer player = new WindowsMediaPlayer();
         public Form1()
         {
+                    
             InitializeComponent();
+            //read music from location
+            player.URL = "C:\\Users\\sunev\\Documents\\2022\\Semester 2\\INF 164\\Part1.GroupINF164\\shrek.wav";
+            player.settings.setMode("loop", true);
         }
 
         private void Form1_Load(object sender, EventArgs e)
