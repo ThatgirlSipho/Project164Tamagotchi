@@ -212,7 +212,7 @@ namespace Project164Tamagotchi
             }
             else if (happy == 60)
             {
-                MessageBox.Show("I am as cool as a cucumber. Start worrying about me please");
+                
                 if (name == "Fiona")
                 {
                     pictureBox1.Image = Properties.Resources.Fiona_Nervous;
@@ -236,7 +236,7 @@ namespace Project164Tamagotchi
             }
             else if (happy ==100 )
             {
-                MessageBox.Show("Soft life hehehe");
+                
                 if (name == "Fiona")
                 {
                     pictureBox1.Image = Properties.Resources.Fiona_Happy;
