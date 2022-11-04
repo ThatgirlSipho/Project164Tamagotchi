@@ -171,6 +171,7 @@
             this.btnInfo.TabIndex = 11;
             this.btnInfo.Text = "Information";
             this.btnInfo.UseVisualStyleBackColor = true;
+            this.btnInfo.Click += new System.EventHandler(this.btnInfo_Click);
             // 
             // btnDelete
             // 

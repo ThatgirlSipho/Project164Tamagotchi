@@ -298,5 +298,12 @@ namespace Project164Tamagotchi
 
             }
         }
+
+        private void btnInfo_Click(object sender, EventArgs e)
+        {
+            //when the button information is clicked a new form opens
+            Information newForm = new Information();
+            newForm.Show();
+        }
     }
 }
