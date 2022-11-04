@@ -64,13 +64,13 @@ namespace Project164Tamagotchi
             ReadDataFromFile("foodItems", foodItems);
 
             //when the form loads hardcoded food items and cost already added onto dgv
-            Food fooditem1 = new Food("Apple", "Fruits and veg", 10);
+            Food fooditem1 = new Food("Apple", "Fruits and veg", 5);
             foodItems.Add(fooditem1);
-            Food fooditem2 = new Food("Pie", "Fats and oils", 20);
+            Food fooditem2 = new Food("Pie", "Fats and oils", 10);
             foodItems.Add(fooditem2);
-            Food fooditem3 = new Food("Fish", "Protein", 30);
+            Food fooditem3 = new Food("Fish", "Protein", 15);
             foodItems.Add(fooditem3);
-            Food fooditem4 = new Food("Rice", "Carbohydrates", 40);
+            Food fooditem4 = new Food("Rice", "Carbohydrates", 20);
             foodItems.Add(fooditem4);
             dgvData.DataSource = foodItems;
 
@@ -120,6 +120,46 @@ namespace Project164Tamagotchi
             //messagebox so that the user clicks on the refresh button from tamagotchi home, in order to see updated code
             MessageBox.Show("Don't forget to refresh to get an update");
             this.Hide();
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            int selectedRowIndex;
+            //data from the selected row will be displayed onto the editform when it opens 
+            selectedRowIndex = dgvData.CurrentCell.RowIndex;
+            Food foodToEdit = (Food)dgvData.Rows[selectedRowIndex].DataBoundItem;
+            frmEdit myForm = new frmEdit();
+
+            //when the button edit is clicked the edit form opens 
+            myForm.foodToUpdate = foodToEdit;
+            myForm.ShowDialog();
+            foodItems[selectedRowIndex] = myForm.foodToUpdate;
+
+            //code to add cost for each food type item
+            foreach (DataGridViewRow row in dgvData.Rows)
+            {
+                int ans1 = 5;
+                int ans2 = 10;
+                int ans3 = 15;
+                int ans4 = 20;
+                if ("Fruits and veg" == Convert.ToString(row.Cells[dgvData.Columns["Type"].Index].Value))
+                {
+                    row.Cells[dgvData.Columns["Cost"].Index].Value = ans1;
+                }
+                else if ("Fats and oils" == Convert.ToString(row.Cells[dgvData.Columns["Type"].Index].Value))
+                {
+                    row.Cells[dgvData.Columns["Cost"].Index].Value = ans2;
+                }
+                else if ("Protein" == Convert.ToString(row.Cells[dgvData.Columns["Type"].Index].Value))
+                {
+                    row.Cells[dgvData.Columns["Cost"].Index].Value = ans3;
+                }
+                else if ("Carbohydrates" == Convert.ToString(row.Cells[dgvData.Columns["Type"].Index].Value))
+                {
+                    row.Cells[dgvData.Columns["Cost"].Index].Value = ans4;
+                }
+
+            }
         }
     }
 }
