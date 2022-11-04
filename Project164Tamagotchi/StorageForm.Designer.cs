@@ -42,6 +42,11 @@
             this.Cost = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label4 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.btnStats = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
+            this.btnEdit = new System.Windows.Forms.Button();
+            this.btnInfo = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).BeginInit();
             this.SuspendLayout();
@@ -94,7 +99,7 @@
             // 
             // btnConfirm
             // 
-            this.btnConfirm.Location = new System.Drawing.Point(121, 235);
+            this.btnConfirm.Location = new System.Drawing.Point(146, 235);
             this.btnConfirm.Name = "btnConfirm";
             this.btnConfirm.Size = new System.Drawing.Size(120, 29);
             this.btnConfirm.TabIndex = 5;
@@ -103,7 +108,7 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(97, 271);
+            this.btnAdd.Location = new System.Drawing.Point(121, 271);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(177, 33);
@@ -192,12 +197,65 @@
             this.label7.TabIndex = 16;
             this.label7.Text = "Game Score:";
             // 
+            // btnStats
+            // 
+            this.btnStats.Location = new System.Drawing.Point(76, 446);
+            this.btnStats.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnStats.Name = "btnStats";
+            this.btnStats.Size = new System.Drawing.Size(300, 49);
+            this.btnStats.TabIndex = 17;
+            this.btnStats.Text = "Total Food Items";
+            this.btnStats.UseVisualStyleBackColor = true;
+            // 
+            // btnBack
+            // 
+            this.btnBack.Location = new System.Drawing.Point(12, 13);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(193, 52);
+            this.btnBack.TabIndex = 18;
+            this.btnBack.Text = "<<<";
+            this.btnBack.UseVisualStyleBackColor = true;
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.Location = new System.Drawing.Point(1033, 140);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(140, 35);
+            this.btnEdit.TabIndex = 19;
+            this.btnEdit.Text = "Edit Food";
+            this.btnEdit.UseVisualStyleBackColor = true;
+            // 
+            // btnInfo
+            // 
+            this.btnInfo.Location = new System.Drawing.Point(1033, 333);
+            this.btnInfo.Name = "btnInfo";
+            this.btnInfo.Size = new System.Drawing.Size(140, 44);
+            this.btnInfo.TabIndex = 20;
+            this.btnInfo.Text = "Information";
+            this.btnInfo.UseVisualStyleBackColor = true;
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnDelete.Location = new System.Drawing.Point(1033, 531);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(140, 34);
+            this.btnDelete.TabIndex = 21;
+            this.btnDelete.Text = "Delete Food";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            // 
             // StorageForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.ClientSize = new System.Drawing.Size(1228, 651);
+            this.Controls.Add(this.btnDelete);
+            this.Controls.Add(this.btnInfo);
+            this.Controls.Add(this.btnEdit);
+            this.Controls.Add(this.btnBack);
+            this.Controls.Add(this.btnStats);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.dgvData);
@@ -234,5 +292,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Cost;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button btnStats;
+        private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Button btnEdit;
+        private System.Windows.Forms.Button btnInfo;
+        private System.Windows.Forms.Button btnDelete;
     }
 }
