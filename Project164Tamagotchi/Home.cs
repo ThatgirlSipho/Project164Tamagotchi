@@ -283,5 +283,12 @@ namespace Project164Tamagotchi
         //code to pass values from the label from this form to the pantry form
         public static string SetValueForText1 = "";
         public static string SetValueForText2 = "";
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            //when button is clicked, updated values from the pantry will display the new code and the new credits
+            lblPlay.Text = StorageForm.SetValueForText1;
+            lblHealth.Text = StorageForm.SetValueForText2;
+        }
     }
 }

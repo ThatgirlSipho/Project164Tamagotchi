@@ -249,6 +249,7 @@
             this.btnRefresh.TabIndex = 14;
             this.btnRefresh.Text = "🔁";
             this.btnRefresh.UseVisualStyleBackColor = false;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // Home
             // 
