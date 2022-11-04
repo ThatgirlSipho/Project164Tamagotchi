@@ -111,6 +111,7 @@
             this.btnPantry.TabIndex = 4;
             this.btnPantry.Text = "Pantry";
             this.btnPantry.UseVisualStyleBackColor = false;
+            this.btnPantry.Click += new System.EventHandler(this.btnPantry_Click);
             // 
             // btnPlay
             // 

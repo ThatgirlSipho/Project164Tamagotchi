@@ -172,5 +172,12 @@ namespace Project164Tamagotchi
             lblScore.Text = StorageForm.SetValueForText1;
             lblCredits.Text = StorageForm.SetValueForText2;
         }
+
+        private void btnPantry_Click(object sender, EventArgs e)
+        {
+            //when this button is clicked the pantry form will open
+            StorageForm frm2 = new StorageForm();
+            frm2.Show();
+        }
     }
 }
