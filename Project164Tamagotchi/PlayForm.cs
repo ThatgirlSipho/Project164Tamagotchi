@@ -58,7 +58,7 @@ namespace Project164Tamagotchi
             {
                 //Player gets the answer right
                 lblAnswer.Text = "Correct";
-                lblAnswer.ForeColor = Color.Green;
+                lblAnswer.ForeColor = Color.Blue;
                 score += 10;
                 lblScore.Text = "Score: " + score;
                 SetUpGame();
@@ -71,6 +71,11 @@ namespace Project164Tamagotchi
                 lblAnswer.Text = "Incorrect";
                 lblAnswer.ForeColor = Color.Red;
             }
+            if (score > 0)
+            { credits = 10;
+              lblCredits.Text = "Credits: " + credits;
+            }
+
         }
     private void SetUpGame()
             //randomizes numbers
