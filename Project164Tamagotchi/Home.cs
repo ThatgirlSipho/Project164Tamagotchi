@@ -224,7 +224,6 @@ namespace Project164Tamagotchi
             }
             else if (happy == 80)
             {
-                MessageBox.Show("Surely it can't get better than this. (Tip: it can)");
                 if (name == "Fiona")
                 {
                     pictureBox1.Image = Properties.Resources.fiona_satisdied;
@@ -260,12 +259,14 @@ namespace Project164Tamagotchi
         {
             PlayForm myform = new PlayForm();
             myform.ShowDialog();
+            this.Hide();
         }
 
         private void btnPantry_Click(object sender, EventArgs e)
         {
             StorageForm myform = new StorageForm(); 
             myform = new StorageForm();
+            this.Hide();
         }
     }
 }
