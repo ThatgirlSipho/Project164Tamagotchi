@@ -258,5 +258,45 @@ namespace Project164Tamagotchi
                 "Total Food Items:" + " " + total.ToString());
 
         }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            int selectedRowIndex;
+            //data from the selected row will be displayed onto the editform when it opens 
+            selectedRowIndex = dgvData.CurrentCell.RowIndex;
+            Food foodToEdit = (Food)dgvData.Rows[selectedRowIndex].DataBoundItem;
+            frmEdit myForm = new frmEdit();
+
+            //when the button edit is clicked the edit form opens 
+            myForm.foodToUpdate = foodToEdit;
+            myForm.ShowDialog();
+            foodItems[selectedRowIndex] = myForm.foodToUpdate;
+
+            //code to add cost for each food type item
+            foreach (DataGridViewRow row in dgvData.Rows)
+            {
+                int ans1 = 5;
+                int ans2 = 10;
+                int ans3 = 15;
+                int ans4 = 20;
+                if ("Fruits and veg" == Convert.ToString(row.Cells[dgvData.Columns["Type"].Index].Value))
+                {
+                    row.Cells[dgvData.Columns["Cost"].Index].Value = ans1;
+                }
+                else if ("Fats and oils" == Convert.ToString(row.Cells[dgvData.Columns["Type"].Index].Value))
+                {
+                    row.Cells[dgvData.Columns["Cost"].Index].Value = ans2;
+                }
+                else if ("Protein" == Convert.ToString(row.Cells[dgvData.Columns["Type"].Index].Value))
+                {
+                    row.Cells[dgvData.Columns["Cost"].Index].Value = ans3;
+                }
+                else if ("Carbohydrates" == Convert.ToString(row.Cells[dgvData.Columns["Type"].Index].Value))
+                {
+                    row.Cells[dgvData.Columns["Cost"].Index].Value = ans4;
+                }
+
+            }
+        }
     }
 }
