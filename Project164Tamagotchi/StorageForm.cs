@@ -51,11 +51,17 @@ namespace Project164Tamagotchi
         //global variables
         public Food foodToUpdate;
         BindingList<Food> foodItems = new BindingList<Food>();
+        public static string SetValueForText1 = "";
+        public static string SetValueForText2 = "";
 
         private void StorageForm_Load(object sender, EventArgs e)
         {
             //when form loads, data from serialized file will be uploaded
             ReadDataFromFile("foodItems", foodItems);
+
+            //display of scores and credits from one form to another
+            lblScore.Text = Home.SetValueForText1;
+            lblHealth.Text = Home.SetValueForText2;
 
             //when the form loads hardcoded food items and cost already added onto dgv
             Food fooditem1 = new Food("Apple", "Fruits and veg", 10);
@@ -103,6 +109,11 @@ namespace Project164Tamagotchi
 
         private void btnBack_Click(object sender, EventArgs e)
         {
+            // when the button is clicked, data from the label will be passed to the tamagotchi home form
+            SetValueForText1 = lblScore.Text;
+            SetValueForText2 = lblHealth.Text;
+
+
             //when user closes form, data will be saved onto serialized file
             WriteDataToFile("foodItems", foodItems);
             MessageBox.Show("Your data has been saved");
@@ -214,6 +225,7 @@ namespace Project164Tamagotchi
 
         private void btnStats_Click(object sender, EventArgs e)
         {
+            //calculates how much food item is in the food storage for the tamagotchi
             string value;
             int total = 0;
             int count = 0;
