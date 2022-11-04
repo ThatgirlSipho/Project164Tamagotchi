@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 
-namespace MathsGame
+namespace Project164Tamagotchi
 {
     public partial class PlayForm : Form
     {
