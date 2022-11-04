@@ -19,6 +19,7 @@ namespace Project164Tamagotchi
         int total;
         int score;
         int timeLeft;
+        int credits;
         public PlayForm()
         {
             InitializeComponent();
@@ -72,10 +73,10 @@ namespace Project164Tamagotchi
                 lblAnswer.ForeColor = Color.Red;
             }
             if (score > 0)
-            { credits = 10;
-              lblCredits.Text = "Credits: " + credits;
+            {
+                credits = 10;
+                lblCredit.Text = "Credits: " + credits;
             }
-
         }
     private void SetUpGame()
             //randomizes numbers
@@ -123,7 +124,7 @@ namespace Project164Tamagotchi
                 timeLeft = timeLeft - 1;
                 lblTimeLeft.Text = "Time Left: " + timeLeft + " seconds";
             }
-            else
+           else
             {
                //The Player has ran out of time.
                 gameTimer.Stop();
