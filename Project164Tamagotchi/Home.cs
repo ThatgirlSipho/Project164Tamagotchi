@@ -25,7 +25,7 @@ namespace Project164Tamagotchi
         public Tamagotchi pet = new Tamagotchi(); // Tamagotchi object that can be accessed in all forms
         int sleep;
         string name; //Sharon copy this
-        int health = 0;
+        int health = 50;
         int credit = 100;
         int happy;
 
@@ -35,9 +35,11 @@ namespace Project164Tamagotchi
         {
 
             timerAwake.Start(); //sleep levels deplete from program open
+            timerHappiness.Start();
             sleep = 100; //Sleep levels start high
             lblSleep.Text = Convert.ToString(sleep); //display the sleep levels
-                                                     //MessageBox.Show(pet.Character);
+            lblPlay.Text = Convert.ToString(credit);
+            lblHealth.Text = Convert.ToString(health);
             lblName.Text = pet.Character;
             name = pet.Character;
 
@@ -70,14 +72,23 @@ namespace Project164Tamagotchi
         private void timerSleep_Tick(object sender, EventArgs e)
         {
             //each tick is 2 seconds long and maximum sleep is 20 seconds
-            sleep += 10;
+            sleep += 1;
             lblSleep.Text = Convert.ToString(sleep);
-            if (sleep == 100) //When sleep levels are full, pet wakes up
+            if (sleep >= 100) //When sleep levels are full, pet wakes up
             {
                 timerSleep.Stop();
                 timerAwake.Start();
             }
-            // labelname.Text = pet.Character;
+            if (name == "Fiona")
+            {
+                pictureBox1.Image = Properties.Resources.Fiona_Sleeping;
+
+            }
+            else
+            {
+                pictureBox1.Image = Properties.Resources.Shrek_Sleeping;
+            }
+
         }
 
 
@@ -90,13 +101,18 @@ namespace Project164Tamagotchi
             if (timerSleep.Enabled)
             {
                 timerAwake.Stop(); //making sure that these two do not run at the same time
+
+            
             }
             else
             {
                 timerAwake.Start();
             }
-            sleep -= 5;
+            sleep -= 2;
             health -= 2;
+            lblPlay.Text = Convert.ToString(credit);
+            lblHealth.Text = Convert.ToString(health);
+
 
             if (sleep == 0)
             {
@@ -131,7 +147,7 @@ namespace Project164Tamagotchi
             }
             else
             {
-                MessageBox.Show("File could not tbe found");
+                MessageBox.Show("File could not be found");
             }
 
             return obj;
@@ -163,9 +179,9 @@ namespace Project164Tamagotchi
 
         private void timerHappiness_Tick(object sender, EventArgs e)
         {
-            happy = pet.Happiness(sleep, credit, health);
+            happy = Happiness(sleep, credit, health);
             lblHappiness.Text = Convert.ToString(happy) + "%";
-            if (happy ==0)
+            if (happy <=0)
             {
                 pictureBox1.Image = Properties.Resources.casket;
                 MessageBox.Show(name + " is dead. Are you happy now?");
@@ -182,7 +198,7 @@ namespace Project164Tamagotchi
                     pictureBox1.Image = Properties.Resources.Shrek_Angry;
                 }
             }
-            else if (happy > 20 && happy <= 40)
+            else if (happy == 40)
             {
                 MessageBox.Show("I am getting worried. Help should come anytime soon");
                 if (name == "Fiona")
@@ -194,7 +210,7 @@ namespace Project164Tamagotchi
                     pictureBox1.Image = Properties.Resources.Shrek_Worried;
                 }
             }
-            else if (happy > 40 && happy <= 60)
+            else if (happy == 60)
             {
                 MessageBox.Show("I am as cool as a cucumber. Start worrying about me please");
                 if (name == "Fiona")
@@ -206,7 +222,7 @@ namespace Project164Tamagotchi
                     pictureBox1.Image = Properties.Resources.Shrek_Nervous;
                 }
             }
-            else if (happy > 60 && happy <= 80)
+            else if (happy == 80)
             {
                 MessageBox.Show("Surely it can't get better than this. (Tip: it can)");
                 if (name == "Fiona")
@@ -218,7 +234,7 @@ namespace Project164Tamagotchi
                     pictureBox1.Image = Properties.Resources.Shrek_Satisfied;
                 }
             }
-            else if (happy > 80 )
+            else if (happy ==100 )
             {
                 MessageBox.Show("Soft life hehehe");
                 if (name == "Fiona")
@@ -230,6 +246,14 @@ namespace Project164Tamagotchi
                     pictureBox1.Image = Properties.Resources.Shrek_Happy;
                 }
             }
+        }
+
+        public int Happiness(int petSleep, int petCredit, int petHealth)
+        {
+            int happiness = petCredit + petHealth + petSleep;
+            happiness = happiness / 3;
+
+            return happiness;
         }
     }
 }
