@@ -164,7 +164,7 @@ namespace Project164Tamagotchi
         private void timerHappiness_Tick(object sender, EventArgs e)
         {
             happy = pet.Happiness(sleep, credit, health);
-            lblHappiness.Text = Convert.ToString(happy);
+            lblHappiness.Text = Convert.ToString(happy) + "%";
             if (happy ==0)
             {
                 pictureBox1.Image = Properties.Resources.casket;
