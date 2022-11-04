@@ -200,6 +200,7 @@
             this.btnStats.TabIndex = 12;
             this.btnStats.Text = "Total Food Items";
             this.btnStats.UseVisualStyleBackColor = true;
+            this.btnStats.Click += new System.EventHandler(this.btnStats_Click);
             // 
             // btnBack
             // 
