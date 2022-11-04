@@ -44,7 +44,7 @@
             // btnCheck
             // 
             this.btnCheck.BackColor = System.Drawing.Color.MediumPurple;
-            this.btnCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCheck.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCheck.Location = new System.Drawing.Point(576, 140);
             this.btnCheck.Name = "btnCheck";
             this.btnCheck.Size = new System.Drawing.Size(113, 55);
@@ -56,17 +56,17 @@
             // lblAnswer
             // 
             this.lblAnswer.AutoSize = true;
-            this.lblAnswer.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAnswer.Location = new System.Drawing.Point(45, 296);
+            this.lblAnswer.Font = new System.Drawing.Font("Rockwell", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAnswer.Location = new System.Drawing.Point(88, 294);
             this.lblAnswer.Name = "lblAnswer";
-            this.lblAnswer.Size = new System.Drawing.Size(93, 29);
+            this.lblAnswer.Size = new System.Drawing.Size(102, 29);
             this.lblAnswer.TabIndex = 1;
             this.lblAnswer.Text = "Answer";
             // 
             // lblNumOne
             // 
             this.lblNumOne.AutoSize = true;
-            this.lblNumOne.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNumOne.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNumOne.Location = new System.Drawing.Point(226, 157);
             this.lblNumOne.Name = "lblNumOne";
             this.lblNumOne.Size = new System.Drawing.Size(24, 25);
@@ -76,7 +76,7 @@
             // lblNumTwo
             // 
             this.lblNumTwo.AutoSize = true;
-            this.lblNumTwo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNumTwo.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNumTwo.Location = new System.Drawing.Point(304, 157);
             this.lblNumTwo.Name = "lblNumTwo";
             this.lblNumTwo.Size = new System.Drawing.Size(24, 25);
@@ -86,7 +86,7 @@
             // lblSymbol
             // 
             this.lblSymbol.AutoSize = true;
-            this.lblSymbol.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSymbol.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSymbol.Location = new System.Drawing.Point(265, 157);
             this.lblSymbol.Name = "lblSymbol";
             this.lblSymbol.Size = new System.Drawing.Size(24, 25);
@@ -97,27 +97,30 @@
             // 
             this.lblScore.AutoSize = true;
             this.lblScore.BackColor = System.Drawing.Color.Transparent;
-            this.lblScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblScore.Font = new System.Drawing.Font("Rockwell", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblScore.ForeColor = System.Drawing.Color.MediumOrchid;
             this.lblScore.Location = new System.Drawing.Point(88, 23);
             this.lblScore.Name = "lblScore";
-            this.lblScore.Size = new System.Drawing.Size(83, 29);
+            this.lblScore.Size = new System.Drawing.Size(88, 29);
             this.lblScore.TabIndex = 5;
             this.lblScore.Text = "Score:";
             // 
             // txtAnswer
             // 
-            this.txtAnswer.Location = new System.Drawing.Point(406, 162);
+            this.txtAnswer.Location = new System.Drawing.Point(378, 140);
+            this.txtAnswer.Multiline = true;
             this.txtAnswer.Name = "txtAnswer";
-            this.txtAnswer.Size = new System.Drawing.Size(121, 20);
+            this.txtAnswer.Size = new System.Drawing.Size(160, 55);
             this.txtAnswer.TabIndex = 6;
             // 
             // lblCredit
             // 
             this.lblCredit.AutoSize = true;
-            this.lblCredit.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCredit.Font = new System.Drawing.Font("Rockwell", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCredit.ForeColor = System.Drawing.Color.MediumOrchid;
             this.lblCredit.Location = new System.Drawing.Point(571, 23);
             this.lblCredit.Name = "lblCredit";
-            this.lblCredit.Size = new System.Drawing.Size(90, 29);
+            this.lblCredit.Size = new System.Drawing.Size(103, 29);
             this.lblCredit.TabIndex = 7;
             this.lblCredit.Text = "Credit: ";
             // 
@@ -130,10 +133,11 @@
             // lblTimeLeft
             // 
             this.lblTimeLeft.AutoSize = true;
-            this.lblTimeLeft.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTimeLeft.Font = new System.Drawing.Font("Rockwell", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTimeLeft.ForeColor = System.Drawing.Color.MediumOrchid;
             this.lblTimeLeft.Location = new System.Drawing.Point(265, 23);
             this.lblTimeLeft.Name = "lblTimeLeft";
-            this.lblTimeLeft.Size = new System.Drawing.Size(120, 29);
+            this.lblTimeLeft.Size = new System.Drawing.Size(136, 29);
             this.lblTimeLeft.TabIndex = 8;
             this.lblTimeLeft.Text = "Time Left:";
             // 

@@ -52,9 +52,9 @@ namespace Project164Tamagotchi
             {
                 //Player gets the answer right
                 lblAnswer.Text = "Correct";
-                lblAnswer.ForeColor = Color.Green;
-                score += 10;
-                lblScore.Text = "Score: " + score;
+                lblAnswer.ForeColor = Color.Blue;
+                score += 1;
+                lblScore.Text = "Score: " + Convert.ToString(score);
                 SetUpGame();
 
             }
@@ -62,6 +62,11 @@ namespace Project164Tamagotchi
             {   //Player gets the answer wrong
                 lblAnswer.Text = "Incorrect";
                 lblAnswer.ForeColor = Color.Red;
+            }
+            if (score > 0)
+            { 
+                credits = 10;
+                lblCredit.Text = "Credits: " + Convert.ToString(credits);
             }
         }
     private void SetUpGame()
@@ -110,7 +115,7 @@ namespace Project164Tamagotchi
                 timeLeft = timeLeft - 1;
                 lblTimeLeft.Text = "Time Left: " + timeLeft + " seconds";
             }
-            else
+           else
             {
                //The Player has ran out of time.
                 gameTimer.Stop();
