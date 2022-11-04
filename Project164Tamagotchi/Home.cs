@@ -24,12 +24,12 @@ namespace Project164Tamagotchi
 
         public Tamagotchi pet = new Tamagotchi(); // Tamagotchi object that can be accessed in all forms
         int sleep;
-        string name;
+        string name; //Sharon copy this
         int health = 0;
-        int credit = 100 ;
+        int credit = 100;
+        int happy;
 
-
-
+        
 
         private void Home_Load(object sender, EventArgs e)
         {
@@ -96,6 +96,8 @@ namespace Project164Tamagotchi
                 timerAwake.Start();
             }
             sleep -= 5;
+            health -= 2;
+
             if (sleep == 0)
             {
                 timerAwake.Stop();
@@ -157,6 +159,77 @@ namespace Project164Tamagotchi
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void timerHappiness_Tick(object sender, EventArgs e)
+        {
+            happy = pet.Happiness(sleep, credit, health);
+            lblHappiness.Text = Convert.ToString(happy);
+            if (happy ==0)
+            {
+                pictureBox1.Image = Properties.Resources.casket;
+                MessageBox.Show(name + " is dead. Are you happy now?");
+            }
+            else if ( happy > 0 && happy <= 20)
+            {
+                MessageBox.Show("I am about to DIE. HELP ME");
+                if (name == "Fiona")
+                {
+                    pictureBox1.Image = Properties.Resources.Fiona_Angry;
+                }
+                else
+                {
+                    pictureBox1.Image = Properties.Resources.Shrek_Angry;
+                }
+            }
+            else if (happy > 20 && happy <= 40)
+            {
+                MessageBox.Show("I am getting worried. Help should come anytime soon");
+                if (name == "Fiona")
+                {
+                    pictureBox1.Image = Properties.Resources.Fiona_Worried;
+                }
+                else
+                {
+                    pictureBox1.Image = Properties.Resources.Shrek_Worried;
+                }
+            }
+            else if (happy > 40 && happy <= 60)
+            {
+                MessageBox.Show("I am as cool as a cucumber. Start worrying about me please");
+                if (name == "Fiona")
+                {
+                    pictureBox1.Image = Properties.Resources.Fiona_Nervous;
+                }
+                else
+                {
+                    pictureBox1.Image = Properties.Resources.Shrek_Nervous;
+                }
+            }
+            else if (happy > 60 && happy <= 80)
+            {
+                MessageBox.Show("Surely it can't get better than this. (Tip: it can)");
+                if (name == "Fiona")
+                {
+                    pictureBox1.Image = Properties.Resources.fiona_satisdied;
+                }
+                else
+                {
+                    pictureBox1.Image = Properties.Resources.Shrek_Satisfied;
+                }
+            }
+            else if (happy > 80 )
+            {
+                MessageBox.Show("Soft life hehehe");
+                if (name == "Fiona")
+                {
+                    pictureBox1.Image = Properties.Resources.Fiona_Happy;
+                }
+                else
+                {
+                    pictureBox1.Image = Properties.Resources.Shrek_Happy;
+                }
+            }
         }
     }
 }
