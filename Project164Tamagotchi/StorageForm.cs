@@ -305,5 +305,18 @@ namespace Project164Tamagotchi
             Information newForm = new Information();
             newForm.Show();
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            int selectedRowIndexex = 0;
+            Food foodItemToRemove = foodItems[selectedRowIndexex];
+            foodItems.Remove(foodItemToRemove);
+
+            //code to display credits after the user deletes from the pantry library
+            lblHealth.Text = dgvData.RowCount.ToString();
+            int sum;
+            sum = Convert.ToInt32(lblHealth.Text) * 10;
+            lblHealth.Text = Convert.ToString(sum);
+        }
     }
 }
