@@ -78,7 +78,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.YellowGreen;
             this.label1.Font = new System.Drawing.Font("Ravie", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label1.ForeColor = System.Drawing.Color.Sienna;
             this.label1.Location = new System.Drawing.Point(892, 492);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
@@ -90,7 +90,7 @@
             // 
             this.lblSleep.AutoSize = true;
             this.lblSleep.Font = new System.Drawing.Font("Ravie", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSleep.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.lblSleep.ForeColor = System.Drawing.Color.Sienna;
             this.lblSleep.Location = new System.Drawing.Point(969, 492);
             this.lblSleep.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSleep.Name = "lblSleep";
@@ -102,7 +102,7 @@
             // 
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Ravie", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.lblName.ForeColor = System.Drawing.Color.Sienna;
             this.lblName.Location = new System.Drawing.Point(476, 42);
             this.lblName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblName.Name = "lblName";
@@ -138,7 +138,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Ravie", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label2.ForeColor = System.Drawing.Color.Sienna;
             this.label2.Location = new System.Drawing.Point(216, 492);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
@@ -150,7 +150,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Ravie", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label3.ForeColor = System.Drawing.Color.Sienna;
             this.label3.Location = new System.Drawing.Point(540, 492);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
@@ -162,7 +162,7 @@
             // 
             this.lblPlay.AutoSize = true;
             this.lblPlay.Font = new System.Drawing.Font("Ravie", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPlay.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.lblPlay.ForeColor = System.Drawing.Color.Sienna;
             this.lblPlay.Location = new System.Drawing.Point(279, 495);
             this.lblPlay.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPlay.Name = "lblPlay";
@@ -174,7 +174,7 @@
             // 
             this.lblHealth.AutoSize = true;
             this.lblHealth.Font = new System.Drawing.Font("Ravie", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHealth.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.lblHealth.ForeColor = System.Drawing.Color.Sienna;
             this.lblHealth.Location = new System.Drawing.Point(630, 495);
             this.lblHealth.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblHealth.Name = "lblHealth";
@@ -186,7 +186,7 @@
             // 
             this.lblHappiness.AutoSize = true;
             this.lblHappiness.Font = new System.Drawing.Font("Ravie", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHappiness.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.lblHappiness.ForeColor = System.Drawing.Color.Sienna;
             this.lblHappiness.Location = new System.Drawing.Point(100, 86);
             this.lblHappiness.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblHappiness.Name = "lblHappiness";
