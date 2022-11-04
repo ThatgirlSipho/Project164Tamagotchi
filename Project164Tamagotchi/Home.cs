@@ -15,6 +15,10 @@ namespace Project164Tamagotchi
 {
     public partial class Home : Form
     {
+        //code to pass values from the label from this form to the pantry form
+        public static string SetValueForText1 = "";
+        public static string SetValueForText2 = "";
+
         public Home()
         {
             InitializeComponent();
