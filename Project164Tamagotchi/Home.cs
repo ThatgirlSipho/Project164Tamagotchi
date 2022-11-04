@@ -26,7 +26,7 @@ namespace Project164Tamagotchi
         int sleep;
         string name; //Sharon copy this
         int health = 50;
-        int credit = 0;
+        int credit = 10;
         int happy;
 
         
@@ -166,7 +166,7 @@ namespace Project164Tamagotchi
                 WriteDataToFile(name, pet);
 
             }
-            catch (Exception)
+            catch (NullReferenceException)
             {
                 MessageBox.Show(" Your data has been saved");
             }
@@ -259,7 +259,7 @@ namespace Project164Tamagotchi
         {
             PlayForm myform = new PlayForm();
             myform.ShowDialog();
-            
+            credit += myform.PetPlay.Credit;
             
         }
 

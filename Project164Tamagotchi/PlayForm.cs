@@ -26,7 +26,12 @@ namespace Project164Tamagotchi
             SetUpGame();
         }
 
-        public Tamagotchi petPlay;
+        private Tamagotchi petPlay;
+        public Tamagotchi  PetPlay
+        {
+            get { return petPlay; }
+        }
+        
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -56,9 +61,10 @@ namespace Project164Tamagotchi
                 lblAnswer.Text = "Correct";
                 lblAnswer.ForeColor = Color.Green;
                 score += 10;
-
                 lblScore.Text = "Score: " + score;
                 SetUpGame();
+                petPlay = new Tamagotchi();
+                petPlay.Credit = score;
 
             }
             else
