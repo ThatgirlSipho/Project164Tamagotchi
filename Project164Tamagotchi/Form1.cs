@@ -7,27 +7,27 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+using WMPLib;
+
 
 namespace Project164Tamagotchi
 {
+    
     public partial class Form1 : Form
     {
-        //Create mediaplayer
+        //code to open windows media player
         WindowsMediaPlayer player = new WindowsMediaPlayer();
+       
         public Form1()
         {
                     
            InitializeComponent();
-            //read music from location
-            //player.settings.setMode("loop", true);
-             //_soundPlayer = new SoundPlayer("shrek.wave");
-            //_soundPlayer.URL = 
-            // WindowsMediaPlayer player = new WindowsMediaPlayer();
+            //to locate mediaplayer file
+            player.URL = "shrek.mp3"; 
+            player.settings.setMode("loop", true);
 
-            
-            //player.URL = Shrek_song;
-            //player.settings.setMode("loop", true);
-            //_soundPlayer.Stream = new MemoryStream(Properties.Resources.Shrek)
+           
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -57,13 +57,12 @@ namespace Project164Tamagotchi
         }
         private void btnPlayMusic_Click(object sender, EventArgs e)
         {
-            //Play music
-             //_soundPlayer.Play();
+           
+
         }
         private void btnStopMusic_Click(object sender, EventArgs e)
         {
-            //Stop music
-           //_soundPlayer.Stop();
+           
         }
         private void btnInstructions_Click(object sender, EventArgs e)
         {
@@ -72,6 +71,18 @@ namespace Project164Tamagotchi
             StreamReader read = new StreamReader(File.OpenRead(path));
             MessageBox.Show(read.ReadToEnd());
             read.Close();
+        }
+
+        private void btnStopMusic_Click_1(object sender, EventArgs e)
+        {
+            //stop music playing
+            player.controls.stop();
+        }
+
+        private void btnPlayMusic_Click_1(object sender, EventArgs e)
+        {
+            //start music
+            player.controls.play();
         }
     }
 }
