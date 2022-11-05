@@ -43,10 +43,5 @@ namespace Project164Tamagotchi
             myform.ShowDialog();
             this.Close();
         }
-
-        private void btnPlay_Click_1(object sender, EventArgs e)
-        {
-
-        }
     }
 }
