@@ -65,5 +65,13 @@ namespace Project164Tamagotchi
             //Stop music
            //_soundPlayer.Stop();
         }
+        private void btnInstructions_Click(object sender, EventArgs e)
+        {
+            //Read instructions from file
+            string path = @"Instructions.txt";
+            StreamReader read = new StreamReader(File.OpenRead(path));
+            MessageBox.Show(read.ReadToEnd());
+            read.Close();
+        }
     }
 }
