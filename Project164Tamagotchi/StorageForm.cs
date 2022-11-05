@@ -55,15 +55,12 @@ namespace Project164Tamagotchi
         public static string SetValueForText2 = "";
         string name;
         //object
-        private Tamagotchi petPantry;
-        public Tamagotchi PetPantry
-        {
-            get { return petPantry; }
-        }
+        public Tamagotchi petPantry = new Tamagotchi();
+        
 
         private void StorageForm_Load(object sender, EventArgs e)
         {
-            name = PetPantry.Character;
+            name = petPantry.Character;
             //when form loads, data from serialized file will be uploaded
             ReadDataFromFile(name+"foodItems", foodItems);
 

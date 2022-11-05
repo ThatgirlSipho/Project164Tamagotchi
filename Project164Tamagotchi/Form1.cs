@@ -17,7 +17,7 @@ namespace Project164Tamagotchi
         public Form1()
         {
                     
-            InitializeComponent();
+           InitializeComponent();
             //read music from location
             player.URL = "C:\\Users\\sunev\\Documents\\2022\\Semester 2\\INF 164\\Part1.GroupINF164\\shrek.wav";
             player.settings.setMode("loop", true);
@@ -42,6 +42,11 @@ namespace Project164Tamagotchi
             }
             myform.ShowDialog();
             this.Close();
+        }
+
+        private void btnPlay_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -277,8 +277,11 @@ namespace Project164Tamagotchi
         {
             StorageForm myform = new StorageForm(); 
             myform = new StorageForm();
-            myform.PetPantry.Character = name;
-        }
+            myform.petPantry.Character = name;
+            credit += Convert.ToInt32(StorageForm.SetValueForText1);
+            health += Convert.ToInt32(StorageForm.SetValueForText2);
+            myform.ShowDialog();
+        }   
 
         //code to pass values from the label from this form to the pantry form
         public static string SetValueForText1 = "";
