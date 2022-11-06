@@ -271,7 +271,16 @@ namespace Project164Tamagotchi
         {
             PlayForm myform = new PlayForm();
             myform.ShowDialog();
-            credit += myform.PetPlay.Credit;
+            myform.play.Credit= credit;
+            try
+            {
+                credit += myform.PetPlay.Credit;
+            }
+            catch (NullReferenceException)
+            {
+                credit += 0;
+            }
+           
             
         }
 

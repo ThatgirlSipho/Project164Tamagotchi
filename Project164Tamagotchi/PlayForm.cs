@@ -25,7 +25,7 @@ namespace Project164Tamagotchi
             InitializeComponent();
             SetUpGame();
         }
-
+        public Tamagotchi play = new Tamagotchi();
         private Tamagotchi petPlay;
         public Tamagotchi  PetPlay
         {
@@ -35,7 +35,8 @@ namespace Project164Tamagotchi
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            credits = play.Credit;
+            lblCredit.Text= Convert.ToString(credits);
         }
         private void CheckAnswer(object sender, EventArgs e)
         {
@@ -61,6 +62,8 @@ namespace Project164Tamagotchi
                 lblAnswer.Text = "Correct";
                 lblAnswer.ForeColor = Color.Blue;
                 score += 10;
+                credits += 10;
+                lblCredit.Text = "Credits: " + credits;
                 lblScore.Text = "Score: " + score;
                 SetUpGame();
                 petPlay = new Tamagotchi();
@@ -72,11 +75,11 @@ namespace Project164Tamagotchi
                 lblAnswer.Text = "Incorrect";
                 lblAnswer.ForeColor = Color.Red;
             }
-            if (score > 0)
-            {
-                credits = 10;
-                lblCredit.Text = "Credits: " + credits;
-            }
+            //if (score > 0)
+            //{
+              //  credits = 10;
+               // lblCredit.Text = "Credits: " + credits;
+          //  }
         }
     private void SetUpGame()
             //randomizes numbers
