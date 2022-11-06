@@ -57,11 +57,19 @@ namespace Project164Tamagotchi
         }
         private void btnInstructions_Click(object sender, EventArgs e)
         {
+            //Write the file first
+            StreamWriter outputFile;
+            outputFile = new StreamWriter("Instructions.txt");
+            outputFile.WriteLine("Welcome to the world of Shrek and Fiona. To start the game please select which character you want to be. Your pet needs to be taken care of. You must feed your pet, make sure it sleeps and then it also needs some entertainment. If you do not do these things with your pet they will die and your game will be over. Goodluck and have fun!");
+            outputFile.Close();
+
             //Read instructions from file
-            string path = @"Instructions.txt";
-            StreamReader read = new StreamReader(File.OpenRead(path));
-            MessageBox.Show(read.ReadToEnd());
-            read.Close();
+            StreamReader inputFile;
+            inputFile = new StreamReader("Instructions.txt");
+            string inputAllLines;
+            inputAllLines = inputFile.ReadToEnd();
+            MessageBox.Show(inputAllLines);
+            inputFile.Close();
         }
 
         private void btnStopMusic_Click_1(object sender, EventArgs e)
