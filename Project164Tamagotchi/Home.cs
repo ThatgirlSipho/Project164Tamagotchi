@@ -31,7 +31,7 @@ namespace Project164Tamagotchi
         int sleep;
         string name; //Sharon copy this
         int health = 50;
-        int credit = 10;
+        int credit = 30;
         int happy;
 
         
@@ -39,8 +39,7 @@ namespace Project164Tamagotchi
         private void Home_Load(object sender, EventArgs e)
         {
             //code to pass values from the label from this form to the pantry form
-            SetValueForText1 = lblPlay.Text;
-            SetValueForText2 = lblHealth.Text;
+          
 
             timerAwake.Start(); //sleep levels deplete from program open
             timerHappiness.Start();
@@ -191,6 +190,9 @@ namespace Project164Tamagotchi
         {
             happy = Happiness(sleep, credit, health);
             lblHappiness.Text = Convert.ToString(happy) + "%";
+            SetValueForText1 = lblPlay.Text;
+            SetValueForText2 = lblHealth.Text;
+
             if (happy <=0 && timerSleep.Enabled != true)
             {
                 pictureBox1.Image = Properties.Resources.casket;
@@ -278,8 +280,8 @@ namespace Project164Tamagotchi
             StorageForm myform = new StorageForm(); 
             myform = new StorageForm();
             myform.petPantry.Character = name;
-            credit += Convert.ToInt32(StorageForm.SetValueForText1);
-            health += Convert.ToInt32(StorageForm.SetValueForText2);
+            credit -= myform.petPantry.Credit;
+            health += myform.petPantry.Health;
             myform.ShowDialog();
         }   
 
@@ -292,6 +294,7 @@ namespace Project164Tamagotchi
             //when button is clicked, updated values from the pantry will display the new code and the new credits
             lblPlay.Text = StorageForm.SetValueForText1;
             lblHealth.Text = StorageForm.SetValueForText2;
+           
         }
     }
 }

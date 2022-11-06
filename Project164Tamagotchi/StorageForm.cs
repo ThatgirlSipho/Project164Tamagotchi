@@ -56,7 +56,12 @@ namespace Project164Tamagotchi
         string name;
         //object
         public Tamagotchi petPantry = new Tamagotchi();
-        
+        private Tamagotchi pantry;
+        public Tamagotchi Pantry
+        {
+            get { return pantry; }
+        }
+        int total;
 
         private void StorageForm_Load(object sender, EventArgs e)
         {
@@ -149,28 +154,28 @@ namespace Project164Tamagotchi
             //code to subtract points after a user purchases something
             if (Convert.ToInt32(lblScore.Text) >= 30 && cbxType.Text == "Carbohydrates")
             {
-                int total;
+                
                 total = Convert.ToInt32(lblScore.Text) - 20;
                 lblScore.Text = Convert.ToString(total);
 
             }
             else if (Convert.ToInt32(lblScore.Text) >= 30 && cbxType.Text == "Protein")
             {
-                int total;
+                
                 total = Convert.ToInt32(lblScore.Text) - 15;
                 lblScore.Text = Convert.ToString(total);
 
             }
             else if (Convert.ToInt32(lblScore.Text) >= 30 && cbxType.Text == "Fats and oils")
             {
-                int total;
+                
                 total = Convert.ToInt32(lblScore.Text) - 10;
                 lblScore.Text = Convert.ToString(total);
 
             }
             else if (Convert.ToInt32(lblScore.Text) >= 30 && cbxType.Text == "Fruits and veg")
             {
-                int total;
+                
                 total = Convert.ToInt32(lblScore.Text) - 5;
                 lblScore.Text = Convert.ToString(total);
 
@@ -199,6 +204,9 @@ namespace Project164Tamagotchi
             lblHealth.Text = dgvData.RowCount.ToString();
             int sum;
             sum = Convert.ToInt32(lblHealth.Text) * 10;
+            pantry = new Tamagotchi();
+            pantry.Health = sum;
+            pantry.Credit = total;
             lblHealth.Text = Convert.ToString(sum);
 
             //code to add cost for each food type item

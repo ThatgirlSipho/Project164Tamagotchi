@@ -55,15 +55,6 @@ namespace Project164Tamagotchi
             // Close form
             this.Close();
         }
-        private void btnPlayMusic_Click(object sender, EventArgs e)
-        {
-           
-
-        }
-        private void btnStopMusic_Click(object sender, EventArgs e)
-        {
-           
-        }
         private void btnInstructions_Click(object sender, EventArgs e)
         {
             //Read instructions from file

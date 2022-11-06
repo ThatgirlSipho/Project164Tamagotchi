@@ -47,20 +47,18 @@
             this.cbxNames.Items.AddRange(new object[] {
             "Fiona",
             "Shrek"});
-            this.cbxNames.Location = new System.Drawing.Point(411, 154);
-            this.cbxNames.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cbxNames.Location = new System.Drawing.Point(274, 100);
             this.cbxNames.Name = "cbxNames";
-            this.cbxNames.Size = new System.Drawing.Size(298, 28);
+            this.cbxNames.Size = new System.Drawing.Size(200, 21);
             this.cbxNames.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(150, 14);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(100, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(439, 52);
+            this.label2.Size = new System.Drawing.Size(295, 33);
             this.label2.TabIndex = 6;
             this.label2.Text = "SHREK AND FIONA";
             // 
@@ -68,19 +66,17 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(406, 122);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(271, 79);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(327, 29);
+            this.label1.Size = new System.Drawing.Size(203, 18);
             this.label1.TabIndex = 7;
             this.label1.Text = "Please select your pet to start";
             // 
             // btnPlay
             // 
-            this.btnPlay.Location = new System.Drawing.Point(159, 142);
-            this.btnPlay.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnPlay.Location = new System.Drawing.Point(106, 92);
             this.btnPlay.Name = "btnPlay";
-            this.btnPlay.Size = new System.Drawing.Size(118, 52);
+            this.btnPlay.Size = new System.Drawing.Size(79, 34);
             this.btnPlay.TabIndex = 8;
             this.btnPlay.Text = "Play";
             this.btnPlay.UseVisualStyleBackColor = true;
@@ -88,30 +84,27 @@
             // 
             // btnInstructions
             // 
-            this.btnInstructions.Location = new System.Drawing.Point(159, 225);
-            this.btnInstructions.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnInstructions.Location = new System.Drawing.Point(106, 146);
             this.btnInstructions.Name = "btnInstructions";
-            this.btnInstructions.Size = new System.Drawing.Size(118, 52);
+            this.btnInstructions.Size = new System.Drawing.Size(79, 34);
             this.btnInstructions.TabIndex = 9;
             this.btnInstructions.Text = "Instructions";
             this.btnInstructions.UseVisualStyleBackColor = true;
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(159, 309);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnClose.Location = new System.Drawing.Point(106, 201);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(118, 52);
+            this.btnClose.Size = new System.Drawing.Size(79, 34);
             this.btnClose.TabIndex = 10;
             this.btnClose.Text = "Close game";
             this.btnClose.UseVisualStyleBackColor = true;
             // 
             // btnPlayMusic
             // 
-            this.btnPlayMusic.Location = new System.Drawing.Point(159, 400);
-            this.btnPlayMusic.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnPlayMusic.Location = new System.Drawing.Point(106, 260);
             this.btnPlayMusic.Name = "btnPlayMusic";
-            this.btnPlayMusic.Size = new System.Drawing.Size(118, 52);
+            this.btnPlayMusic.Size = new System.Drawing.Size(79, 34);
             this.btnPlayMusic.TabIndex = 11;
             this.btnPlayMusic.Text = "Play Music";
             this.btnPlayMusic.UseVisualStyleBackColor = true;
@@ -119,10 +112,9 @@
             // 
             // btnStopMusic
             // 
-            this.btnStopMusic.Location = new System.Drawing.Point(159, 489);
-            this.btnStopMusic.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnStopMusic.Location = new System.Drawing.Point(106, 318);
             this.btnStopMusic.Name = "btnStopMusic";
-            this.btnStopMusic.Size = new System.Drawing.Size(118, 52);
+            this.btnStopMusic.Size = new System.Drawing.Size(79, 34);
             this.btnStopMusic.TabIndex = 12;
             this.btnStopMusic.Text = "Stop Music";
             this.btnStopMusic.UseVisualStyleBackColor = true;
@@ -131,25 +123,27 @@
             // splitter1
             // 
             this.splitter1.Location = new System.Drawing.Point(0, 0);
+            this.splitter1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(3, 692);
+            this.splitter1.Size = new System.Drawing.Size(2, 450);
             this.splitter1.TabIndex = 13;
             this.splitter1.TabStop = false;
             // 
             // splitter2
             // 
-            this.splitter2.Location = new System.Drawing.Point(3, 0);
+            this.splitter2.Location = new System.Drawing.Point(2, 0);
+            this.splitter2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.splitter2.Name = "splitter2";
-            this.splitter2.Size = new System.Drawing.Size(3, 692);
+            this.splitter2.Size = new System.Drawing.Size(2, 450);
             this.splitter2.TabIndex = 14;
             this.splitter2.TabStop = false;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1200, 692);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.splitter2);
             this.Controls.Add(this.splitter1);
             this.Controls.Add(this.btnStopMusic);
@@ -160,7 +154,6 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cbxNames);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
